@@ -1,0 +1,127 @@
+:root {
+  --color-bg-1: #FFFFFF;
+}
+
+html {
+  min-width: 360px;
+  min-height: 100vh;
+  cursor: default;
+}
+
+body {
+  height: 100%;
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea {
+  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+}
+
+section {
+  position: relative;
+}
+
+input,
+select,
+button {
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 100%;
+  background: rgba(#5f12f1, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(#5f12f1, 0.8);
+  border-radius: 7px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(#5f12f1, 1);
+}
+
+.fancybox-privacy__content {
+  max-width: 990px;
+}
+
+.wrapper {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--color-bg-1);
+}
+
+
+.lazy {
+  background-image: none;
+  opacity: 0;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+
+  &-loaded {
+    opacity: 1;
+    transition: 0.1s;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @include _1200 {
+    max-width: 108rem;
+  }
+}
