@@ -30,9 +30,4 @@ export default defineNuxtConfig({
   },
   css: ['@/assets/styles/main.scss', 'swiper/swiper.min.css'],
   components: ['~/components', '~/components/ui'],
-  // runtimeConfig: {
-  //   public: {
-  //     baseURL: '/nuxt-3/',
-  //   },
-  // },
 });
