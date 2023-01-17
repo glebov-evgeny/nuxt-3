@@ -32,6 +32,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseURL: process.env.NODE_ENV === 'development' ? '/' : '/nuxt-3',
+      base: '/nuxt-3',
     },
   },
 });
