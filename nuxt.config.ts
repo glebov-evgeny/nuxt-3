@@ -25,15 +25,13 @@ export default defineNuxtConfig({
       mode: 'out-in', // default
     },
   },
-  ssr: true,
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/main.scss', 'swiper/swiper.min.css'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui'],
   runtimeConfig: {
     public: {
-      baseURL: process.env.NODE_ENV === 'development' ? '/' : '/nuxt-3',
-      base: '/nuxt-3',
+      baseURL: '/nuxt-3',
     },
   },
 });
