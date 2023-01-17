@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "gh-pages --dotfiles --dist dist"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.1",
@@ -32,6 +32,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.8.0",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.3",
     "jest": "^29.3.1",
     "lint-staged": "^13.1.0",
