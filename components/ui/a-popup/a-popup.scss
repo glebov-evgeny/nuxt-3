@@ -1,0 +1,98 @@
+@import '@/assets/styles/tools/mixins';
+
+.a-popup {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  @media all and (min-width: 768px) {
+    padding: var(--a-padding-x8);
+  }
+
+  &__backdrop {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(17 37 61 / 50%);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+    padding: var(--a-padding-x8) var(--a-padding-x4);
+    background-color: var(--color-bg-contrast);
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    @media all and (min-width: 768px) {
+      padding: var(--a-padding-x12) var(--a-padding-x8);
+      border-radius: var(--border-radius-x3);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+    width: rem(34);
+    height: rem(34);
+    padding: var(--a-padding-x2);
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius-x1);
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(18);
+      height: rem(18);
+      background-image: url('/images/icons/close.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.4s ease;
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  &__content {
+    overflow-y: auto;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}

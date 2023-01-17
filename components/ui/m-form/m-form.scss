@@ -1,0 +1,14 @@
+@import '@/assets/styles/tools/mixins';
+
+.m-form {
+  &__title {
+    margin-bottom: rem(24);
+    font-size: rem(34);
+    font-weight: 500;
+    line-height: rem(36);
+  }
+
+  &__inputs {
+    margin-bottom: rem(16);
+  }
+}

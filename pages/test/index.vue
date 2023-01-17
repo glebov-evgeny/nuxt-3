@@ -1,8 +1,8 @@
 <template>
   <div>
-    <s-dumb />
-    <s-test />
-    <s-dumb />
+    <s-dumb2 />
+
+    <s-dumb-2 />
   </div>
 </template>
 

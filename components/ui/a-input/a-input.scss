@@ -1,0 +1,18 @@
+@import '@/assets/styles/tools/mixins';
+
+.a-input {
+  &__textfield {
+    width: 100%;
+    border: 0;
+    border-width: rem(1);
+    border-style: solid;
+    border-color: var(--color-input-border);
+    border-radius: var(--border-radius-x2);
+    outline: none;
+    font-size: rem(14);
+
+    &--medium {
+      padding: var(--a-padding-x3) var(--a-padding-x4);
+    }
+  }
+}
