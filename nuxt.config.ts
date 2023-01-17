@@ -2,7 +2,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   debug: true,
-  ssr: true,
+  ssr: false,
   app: {
     head: {
       title: 'Nuxt 3',
