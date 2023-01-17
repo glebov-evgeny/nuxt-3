@@ -2,6 +2,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   debug: true,
+  ssr: true,
   app: {
     head: {
       title: 'Nuxt 3',
@@ -24,14 +25,15 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in', // default
     },
+    baseURL: '/nuxt-3',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/main.scss', 'swiper/swiper.min.css'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui'],
-  runtimeConfig: {
-    public: {
-      baseURL: '/nuxt-3',
-    },
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     baseURL: '/nuxt-3',
+  //   },
+  // },
 });
