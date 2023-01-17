@@ -3,7 +3,8 @@
     <div class="s-header__container l-wide">
       <div class="s-header__logo">
         <nuxt-link to="/">
-          <img src="@/assets/images/header/test.png" alt="logo" />
+          <img src="@/assets/images/header/test.png" alt="logo1" />
+          <img src="@/images/test.png" alt="logo2" />
         </nuxt-link>
       </div>
       <div class="s-header__menu" v-if="!isMobile">
