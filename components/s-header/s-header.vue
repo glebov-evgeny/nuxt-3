@@ -36,7 +36,7 @@ const menuItems = ref([
   },
   {
     name: 'test',
-    anchor: 'Линк',
+    anchor: 'ZZZZZZZ',
     link: '#test',
   },
 ]);
