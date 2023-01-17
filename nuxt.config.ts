@@ -1,6 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
-const deployTarget = process.env.NODE_ENV || 'development';
+// const deployTarget = process.env.NODE_ENV || 'development';
 
 export default defineNuxtConfig({
   debug: true,
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in', // default
     },
-    baseURL: deployTarget === 'gh-pages' ? '/nuxt-3/' : '/',
+    baseURL: '/nuxt-3/',
   },
   css: ['@/assets/styles/main.scss', 'swiper/swiper.min.css'],
   components: ['~/components', '~/components/ui'],
