@@ -14,7 +14,8 @@
     "lint": "yarn prettier & yarn lint:js & yarn lint:style",
     "test": "jest",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.1",
