@@ -1,5 +1,5 @@
 {
-  "name": "Project",
+  "name": "qroject",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "generate": "nuxt generate",
-    "deploy": "NODE_ENV=gh-pages nuxt generate"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.1",
