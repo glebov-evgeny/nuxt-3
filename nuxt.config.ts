@@ -27,13 +27,6 @@ export default defineNuxtConfig({
     },
     baseURL: '/nuxt-3',
   },
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/main.scss', 'swiper/swiper.min.css'],
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui'],
-  // runtimeConfig: {
-  //   public: {
-  //     baseURL: '/nuxt-3',
-  //   },
-  // },
 });

@@ -3,7 +3,7 @@
     <div class="s-header__container l-wide">
       <div class="s-header__logo">
         <nuxt-link to="/">
-          <img src="/images/test.png" alt="logo" />
+          <img src="@/images/test.png" alt="logo" />
         </nuxt-link>
       </div>
       <div class="s-header__menu" v-if="!isMobile">
@@ -22,7 +22,6 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import './s-header.scss';
 
 const menuItems = ref([
   {
@@ -58,3 +57,7 @@ onMounted(() => {
   window.addEventListener('resize', handleResize);
 });
 </script>
+
+<style lang="scss">
+@import './s-header.scss';
+</style>
