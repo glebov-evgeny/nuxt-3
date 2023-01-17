@@ -25,7 +25,6 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in', // default
     },
-    baseURL: '/nuxt-3/',
   },
   css: ['@/assets/styles/main.scss', 'swiper/swiper.min.css'],
   components: ['~/components', '~/components/ui'],
