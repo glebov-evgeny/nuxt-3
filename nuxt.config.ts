@@ -3,6 +3,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
   debug: true,
   ssr: true,
+  target: 'static',
   app: {
     head: {
       title: 'Nuxt 3',
@@ -25,12 +26,13 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in', // default
     },
+    baseURL: '/nuxt-3/',
   },
   css: ['@/assets/styles/main.scss', 'swiper/swiper.min.css'],
   components: ['~/components', '~/components/ui'],
-  runtimeConfig: {
-    public: {
-      baseURL: '/nuxt-3/',
-    },
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     baseURL: '/nuxt-3/',
+  //   },
+  // },
 });
