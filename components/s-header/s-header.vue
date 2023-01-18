@@ -1,11 +1,12 @@
 <template>
-  <header class="s-header">
+  <header class="header">
     <div class="s-header__container l-wide">
       <div class="s-header__logo">
         <nuxt-link to="/">
           <img src="@/assets/images/header/test.png" alt="logo1" />
         </nuxt-link>
       </div>
+      <p class="header__test">@@@@@@</p>
       <div class="s-header__menu" v-if="!isMobile">
         <m-menu :items="menuItems" />
       </div>

@@ -1,3 +1,4 @@
+// @import '@/assets/styles/tools/mixins';
 @use '@/assets/styles/tools/mixins' as *;
 
 html,

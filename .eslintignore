@@ -6,3 +6,6 @@ static
 /.vscode
 .nuxt
 .idea
+assets/styles/variables/*
+assets/styles/tools/*
+assets/*
