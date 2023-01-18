@@ -1,83 +1,11 @@
 @import '@/assets/styles/tools/mixins';
 
-.s-header {
-  padding: var(--a-padding-x3) 0;
-  background-color: var(--color-bg-contrast);
+.header {
+  color: var(--color-text);
+  background: var(--color-bg);
 
-  @media all and (min-width: 768px) {
-    padding: var(--a-padding-x3) 0 var(--a-padding-x4);
-  }
-
-  @media all and (min-width: 1140px) {
-    padding: var(--a-padding-x6) 0;
-  }
-
-  &__logo {
-    img {
-      max-width: rem(40);
-    }
-  }
-
-  &__container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    @media all and (min-width: 1430px) {
-      flex-wrap: none;
-    }
-  }
-
-  &__menu {
-    order: 1;
-    width: 100%;
-    margin-top: rem(12);
-
-    @media all and (min-width: 1430px) {
-      order: 0;
-      width: auto;
-      margin-top: 0;
-      margin-left: rem(44);
-    }
-  }
-
-  &__actions {
-    margin-left: rem(2);
-
-    @media all and (min-width: 769px) {
-      margin-left: rem(32);
-    }
-  }
-
-  &__phone {
-    margin-left: auto;
-    line-height: rem(20);
-
-    &-number {
-      display: none;
-      font-size: rem(14);
-      font-weight: 500;
-
-      @media all and (min-width: 769px) {
-        display: block;
-      }
-    }
-  }
-
-  &__button {
-    margin-right: rem(2);
-
-    @media all and (min-width: 576px) {
-      margin-right: rem(8);
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__burger {
-    width: rem(36);
-    height: rem(36);
+  &__test {
+    padding: rem(10);
+    font-size: rem(20);
   }
 }
