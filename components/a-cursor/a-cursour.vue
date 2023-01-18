@@ -6,7 +6,7 @@
 import './a-cursor.scss';
 
 export default {
-  name: 'ACursor',
+  name: 'a-cursor',
 
   data() {
     return {

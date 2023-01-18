@@ -22,13 +22,17 @@ module.exports = {
       'error',
       'ignorePackages',
       {
-        vue: 'never',
         js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        vue: 'never',
       },
     ],
     'vue/multi-word-component-names': 0,
   },
   settings: {
-    'import/resolver': {},
+
   },
 };
