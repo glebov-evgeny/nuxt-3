@@ -1,7 +1,12 @@
+/* stylelint-disable */
 @at-root {
   .dark-themes {
     --color-text: #fff;
     --color-bg: #000;
     --color-text-1: #db1717;
+    .header__themes--dark {
+      fill: #1a1a1a;
+    }
   }
 }
+/* stylelint-enable */

@@ -1,9 +1,0 @@
-:root {
-  --color-text: #000;
-  --color-bg: #fff;
-  --color-text-1: #db1717;
-
-  .header__themes--dark {
-    fill: #fff;
-  }
-}
