@@ -2,11 +2,10 @@
   <div :class="['s-layout', { 'dark-themes': isLightThemes }]">
     <s-header @handler-change-themes="changeThemes" :isMobileView="isMobileView" />
     <main class="main">
-      <p>{{ isMobileView ? 'да' : 'нет' }}</p>
       <slot />
     </main>
     <s-footer />
-    <a-cursor />
+    <a-cursor v-if="!isMobileView" />
   </div>
 </template>
 
