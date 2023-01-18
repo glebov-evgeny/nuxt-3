@@ -1,12 +1,21 @@
 <template>
-  <div class="s-layout">
-    <s-header />
+  <div :class="['s-layout', { 'dark-themes': isLightThemes }]">
+    <s-header @handler-change-themes="changeThemes" />
     <main class="s-main">
       <slot />
     </main>
     <s-footer />
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const isLightThemes = ref(false);
+const changeThemes = () => {
+  isLightThemes.value = !isLightThemes.value;
+};
+</script>
 
 <style>
 .page-enter-active,
