@@ -7,5 +7,4 @@
 
 <script setup>
 import './s-test.scss';
-import './s-test.json';
 </script>

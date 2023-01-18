@@ -7,5 +7,4 @@
 
 <script setup>
 import './s-dumb2.scss';
-import './s-dumb2.json';
 </script>

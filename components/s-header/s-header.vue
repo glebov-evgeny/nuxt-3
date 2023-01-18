@@ -6,7 +6,9 @@
           <img src="@/assets/images/header/logo.png" alt="logo" />
         </nuxt-link>
       </div>
-      <p>{{ isActiveBurger ? 'да' : 'нет' }}</p>
+      <div class="header__menu">
+        <m-menu :items="menuItems" />
+      </div>
       <button type="button" @click="clickBurger" v-if="isMobileView" class="header__burger">
         <svg
           class="ham hamRotate hamR"
@@ -26,10 +28,7 @@
           />
         </svg>
       </button>
-      <!-- <div class="s-header__menu" v-if="!isMobile">
-        <m-menu :items="menuItems" />
-      </div> -->
-      <!-- <div class="s-header__actions">
+      <div class="s-header__actions">
         <button @click="changeLanguage($i18n)" class="" type="button">Переключалка</button>
         <button @click="changeThemes" class="header__themes" type="button">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +46,7 @@
             </defs>
           </svg>
         </button>
-      </div> -->
+      </div>
     </div>
 
     <a-popup :visible="showPopup" @close="showPopup = false" class="s-header__popup">
@@ -57,6 +56,7 @@
 </template>
 
 <script setup>
+import './s-header.scss';
 import { ref, onMounted } from 'vue';
 
 const emit = defineEmits(['handler-change-themes']);
@@ -71,23 +71,23 @@ const props = defineProps({
 const isScrolled = ref(false);
 const isActiveBurger = ref(false);
 
-// const menuItems = ref([
-//   {
-//     name: 'index',
-//     anchor: 'главная',
-//     link: '/',
-//   },
-//   {
-//     name: 'test',
-//     anchor: 'Тест',
-//     link: '/test',
-//   },
-//   {
-//     name: 'test',
-//     anchor: 'ZZZZZZZ',
-//     link: '#test',
-//   },
-// ]);
+const menuItems = ref([
+  {
+    name: 'index',
+    anchor: 'главная',
+    link: '/',
+  },
+  {
+    name: 'test',
+    anchor: 'Тест',
+    link: '/test',
+  },
+  {
+    name: 'test',
+    anchor: 'ZZZZZZZ',
+    link: '#test',
+  },
+]);
 
 // eslint-disable-next-line no-unused-vars
 const scrollPage = () => {
@@ -122,7 +122,3 @@ onMounted(() => {
   scrollPage();
 });
 </script>
-
-<style lang="scss">
-@import './s-header.scss';
-</style>

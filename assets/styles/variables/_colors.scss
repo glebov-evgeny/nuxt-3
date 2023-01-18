@@ -1,7 +1,12 @@
+/* stylelint-disable */
 :root {
   --color-text: #000;
   --color-text-1: #db1717;
   --color-bg: #fff;
   --color-white: #fff;
   --color-yellow: #fde826;
+  .header__themes--dark {
+    fill: #1a1a1a;
+  }
 }
+/* stylelint-enable */
