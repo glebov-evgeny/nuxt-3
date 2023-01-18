@@ -1,7 +1,8 @@
 <template>
   <div :class="['s-layout', { 'dark-themes': isLightThemes }]">
-    <s-header @handler-change-themes="changeThemes" />
+    <s-header @handler-change-themes="changeThemes" :isMobileView="isMobileView" />
     <main class="main">
+      <p>{{ isMobileView ? 'да' : 'нет' }}</p>
       <slot />
     </main>
     <s-footer />
@@ -10,15 +11,29 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
+import { ref, onMounted } from 'vue';
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import ACursor from '@/components/a-cursor/a-cursour.vue';
 
 const isLightThemes = ref(false);
+const windowWidth = ref(0);
+const isMobileView = ref(false);
+const mobileBreakpoint = ref(768);
+
 const changeThemes = () => {
   isLightThemes.value = !isLightThemes.value;
 };
+
+const handleResize = () => {
+  windowWidth.value = window.innerWidth;
+  isMobileView.value = !(windowWidth.value > mobileBreakpoint.value);
+};
+
+onMounted(() => {
+  handleResize();
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('DOMContentLoaded', handleResize);
+});
 </script>
 
 <style>

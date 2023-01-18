@@ -6,10 +6,25 @@
           <img src="@/assets/images/header/logo.png" alt="logo" />
         </nuxt-link>
       </div>
+      <p>{{ isActiveBurger ? 'да' : 'нет' }}</p>
       <button type="button" @click="clickBurger" v-if="isMobileView" class="header__burger">
-        <span class="header__burger__line"></span>
-        <span class="header__burger__line"></span>
-        <span class="header__burger__line"></span>
+        <svg
+          class="ham hamRotate hamR"
+          :class="[{ active: isActiveBurger }]"
+          viewBox="0 0 100 100"
+          width="40"
+          ref="ham"
+        >
+          <path
+            class="line top"
+            d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+          />
+          <path class="line middle" d="m 70,50 h -40" />
+          <path
+            class="line bottom"
+            d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+          />
+        </svg>
       </button>
       <!-- <div class="s-header__menu" v-if="!isMobile">
         <m-menu :items="menuItems" />
@@ -45,9 +60,16 @@
 import { ref, onMounted } from 'vue';
 
 const emit = defineEmits(['handler-change-themes']);
-const windowWidth = ref(0);
+// eslint-disable-next-line no-unused-vars
+const props = defineProps({
+  isMobileView: {
+    type: Boolean,
+    required: true,
+  },
+});
+
 const isScrolled = ref(false);
-const isMobileView = ref(true);
+const isActiveBurger = ref(false);
 
 // const menuItems = ref([
 //   {
@@ -72,7 +94,7 @@ const scrollPage = () => {
   let scrollPrev = 0;
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
-    if (scrolled > 70 && scrolled > scrollPrev) {
+    if (scrolled > 80 && scrolled > scrollPrev) {
       isScrolled.value = true;
     } else {
       isScrolled.value = false;
@@ -86,8 +108,8 @@ const changeThemes = (event) => {
   emit('handler-change-themes', event);
 };
 
-const handleResize = () => {
-  windowWidth.value = window.innerWidth;
+const clickBurger = () => {
+  isActiveBurger.value = !isActiveBurger.value;
 };
 
 // eslint-disable-next-line no-unused-vars
@@ -97,10 +119,7 @@ const changeLanguage = (lang) => {
 };
 
 onMounted(() => {
-  handleResize();
   scrollPage();
-  window.addEventListener('resize', handleResize);
-  // window.addEventListener('scroll', scrollPage);
 });
 </script>
 
