@@ -1,7 +1,7 @@
 <template>
   <div :class="['s-layout', { 'dark-themes': isLightThemes }]">
     <s-header @handler-change-themes="changeThemes" />
-    <main class="s-main">
+    <main class="main">
       <slot />
     </main>
     <s-footer />

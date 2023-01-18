@@ -1,7 +1,0 @@
-@import '@/assets/styles/tools/mixins';
-
-.dumb {
-  min-height: rem(1500);
-  padding: rem(50) rem(10);
-  background-color: #f5f5f5;
-}

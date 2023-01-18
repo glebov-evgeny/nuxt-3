@@ -1,7 +1,0 @@
-@import '@/assets/styles/tools/mixins';
-
-.test {
-  min-height: rem(200);
-  padding: rem(50) rem(10);
-  background-color: #777;
-}

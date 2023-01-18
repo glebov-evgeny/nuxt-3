@@ -6,6 +6,11 @@
           <img src="@/assets/images/header/logo.png" alt="logo" />
         </nuxt-link>
       </div>
+      <button type="button" @click="clickBurger" v-if="isMobileView" class="header__burger">
+        <span class="header__burger__line"></span>
+        <span class="header__burger__line"></span>
+        <span class="header__burger__line"></span>
+      </button>
       <!-- <div class="s-header__menu" v-if="!isMobile">
         <m-menu :items="menuItems" />
       </div> -->
@@ -39,7 +44,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const emit = defineEmits(['customChange']);
+const emit = defineEmits(['handler-change-themes']);
+const windowWidth = ref(0);
+const isScrolled = ref(false);
+const isMobileView = ref(true);
 
 // const menuItems = ref([
 //   {
@@ -59,15 +67,12 @@ const emit = defineEmits(['customChange']);
 //   },
 // ]);
 
-const windowWidth = ref(0);
-const isScrolled = ref(false);
-
 // eslint-disable-next-line no-unused-vars
 const scrollPage = () => {
   let scrollPrev = 0;
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
-    if (scrolled > 100 && scrolled > scrollPrev) {
+    if (scrolled > 70 && scrolled > scrollPrev) {
       isScrolled.value = true;
     } else {
       isScrolled.value = false;
