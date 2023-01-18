@@ -5,11 +5,14 @@
       <slot />
     </main>
     <s-footer />
+    <a-cursor />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+// eslint-disable-next-line import/extensions
+// import ACursor from '@/components/a-cursor/a-cursour.vue'
 
 const isLightThemes = ref(false);
 const changeThemes = () => {
