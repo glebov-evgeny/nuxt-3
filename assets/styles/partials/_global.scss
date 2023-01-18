@@ -6,7 +6,8 @@ body {
 }
 
 body {
-  background-color: var(--color-text);
+  color: var(--color-text);
+  background-color: var(--color-white);
   font-family: 'TT Norms', sans-serif;
   font-size: 16px;
   cursor: none;
@@ -24,12 +25,25 @@ button {
   cursor: none;
 }
 
+.s-layout {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: rem(360);
+  height: 100%;
+  margin: auto;
+  color: #16182b;
+}
+
 .container {
   width: 100%;
+  max-width: rem(1400);
   margin: 0 auto;
-  padding: 0 rem(2);
+  padding: 0 rem(20);
 
   @media all and (min-width: 992px) {
-    max-width: rem(300);
+    padding: 0 rem(40);
   }
 }

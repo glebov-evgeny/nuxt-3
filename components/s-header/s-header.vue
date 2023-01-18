@@ -1,16 +1,15 @@
 <template>
-  <header class="header">
-    <div class="s-header__container l-wide">
-      <div class="s-header__logo">
+  <header class="header" :class="[{ invisible: isScrolled }]">
+    <div class="container header__container">
+      <div class="header__logo">
         <nuxt-link to="/">
-          <!-- <img src="@/assets/images/header/test.png" alt="logo1" /> -->
+          <img src="@/assets/images/header/logo.png" alt="logo" />
         </nuxt-link>
       </div>
-      <p class="header__test">@@@@@@</p>
-      <div class="s-header__menu" v-if="!isMobile">
+      <!-- <div class="s-header__menu" v-if="!isMobile">
         <m-menu :items="menuItems" />
-      </div>
-      <div class="s-header__actions">
+      </div> -->
+      <!-- <div class="s-header__actions">
         <button @click="changeLanguage($i18n)" class="" type="button">Переключалка</button>
         <button @click="changeThemes" class="header__themes" type="button">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +27,7 @@
             </defs>
           </svg>
         </button>
-      </div>
+      </div> -->
     </div>
 
     <a-popup :visible="showPopup" @close="showPopup = false" class="s-header__popup">
@@ -42,31 +41,43 @@ import { ref, onMounted } from 'vue';
 
 const emit = defineEmits(['customChange']);
 
-const menuItems = ref([
-  {
-    name: 'index',
-    anchor: 'главная',
-    link: '/',
-  },
-  {
-    name: 'test',
-    anchor: 'Тест',
-    link: '/test',
-  },
-  {
-    name: 'test',
-    anchor: 'ZZZZZZZ',
-    link: '#test',
-  },
-]);
+// const menuItems = ref([
+//   {
+//     name: 'index',
+//     anchor: 'главная',
+//     link: '/',
+//   },
+//   {
+//     name: 'test',
+//     anchor: 'Тест',
+//     link: '/test',
+//   },
+//   {
+//     name: 'test',
+//     anchor: 'ZZZZZZZ',
+//     link: '#test',
+//   },
+// ]);
 
 const windowWidth = ref(0);
+const isScrolled = ref(false);
 
-// const changeThemes = (event) => {
-//   event.emit("handler-change-themes");
-// };
+// eslint-disable-next-line no-unused-vars
+const scrollPage = () => {
+  let scrollPrev = 0;
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    if (scrolled > 100 && scrolled > scrollPrev) {
+      isScrolled.value = true;
+    } else {
+      isScrolled.value = false;
+    }
+    scrollPrev = scrolled;
+  });
+};
+
+// eslint-disable-next-line no-unused-vars
 const changeThemes = (event) => {
-  // no console warning
   emit('handler-change-themes', event);
 };
 
@@ -74,6 +85,7 @@ const handleResize = () => {
   windowWidth.value = window.innerWidth;
 };
 
+// eslint-disable-next-line no-unused-vars
 const changeLanguage = (lang) => {
   // eslint-disable-next-line no-param-reassign
   lang.locale = lang.locale === 'ru' ? 'en' : 'ru';
@@ -81,7 +93,9 @@ const changeLanguage = (lang) => {
 
 onMounted(() => {
   handleResize();
+  scrollPage();
   window.addEventListener('resize', handleResize);
+  // window.addEventListener('scroll', scrollPage);
 });
 </script>
 

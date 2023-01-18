@@ -9,10 +9,10 @@ $circle-size: 10px;
   left: math.div($circle-size, -2);
   width: $circle-size;
   height: $circle-size;
-  background-color: var(--color-text);
+  background-color: var(--color-yellow);
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 15px 6px rgb(113 34 218 / 73%);
+  box-shadow: 0 0 15px 6px rgb(var(--color-text) / 80%);
   pointer-events: none;
 
   // transition: transform 0.1s ease-out, opacity 0.1s linear 0.2s;

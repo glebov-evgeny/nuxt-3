@@ -1,12 +1,20 @@
 @import '@/assets/styles/tools/mixins';
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: rem(10) 0;
   color: var(--color-text);
   background: var(--color-bg);
+  transition: all 0.3s ease;
 
-  &__test {
-    padding: rem(10);
-    color: var(--color-text-1);
-    font-size: rem(20);
+  &.invisible {
+    transform: translateY(-100%);
+  }
+
+  &__logo {
+    max-width: rem(45);
   }
 }
