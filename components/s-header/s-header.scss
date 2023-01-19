@@ -23,6 +23,15 @@
   &__logo {
     max-width: rem(45);
     opacity: 0.1;
+    &-pic {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__link {
   }
 
   &__burger {

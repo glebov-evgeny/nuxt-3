@@ -56,5 +56,18 @@ button {
 }
 
 .main {
-  padding-top: rem(50);
+  padding-top: rem(55);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff4800;
+  border-radius: rem(4);
+}
+
+::-webkit-scrollbar {
+  width: rem(8);
 }
