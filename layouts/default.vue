@@ -5,14 +5,11 @@
       <slot />
     </main>
     <s-footer />
-    <a-cursor v-if="!isMobileView" />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-// eslint-disable-next-line import/no-unresolved, import/extensions
-import ACursor from '@/components/a-cursor/a-cursour.vue';
 
 const isLightThemes = ref(false);
 const windowWidth = ref(0);
