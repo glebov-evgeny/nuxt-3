@@ -3,20 +3,22 @@
 .m-menu {
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
 
   &__item {
-    margin-right: rem(14);
+    // margin-right: rem(14);
 
-    @media all and (min-width: 1430px) {
-      margin-right: rem(24);
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
+    // @include _1440 {
+    //   margin-right: rem(24);
+    // }
+    // @include _768 {
+    //   background: #9b2b3e;
+    // }
+    // &:last-child {
+    //   margin-right: 0;
+    // }
   }
 
   &__link {

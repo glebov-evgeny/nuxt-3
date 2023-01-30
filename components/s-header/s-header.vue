@@ -20,7 +20,8 @@
           </svg>
         </nuxt-link>
       </div>
-      <div class="header__menu">
+      <!-- {{ $tm("menu") }} -->
+      <div class="header__menu" :class="[{ open: isActiveBurger }]">
         <m-menu :items="menuItems" />
       </div>
       <button type="button" @click="clickBurger" v-if="isMobileView" class="header__burger">
@@ -42,9 +43,11 @@
           />
         </svg>
       </button>
-      <div class="s-header__actions">
-        <button @click="changeLanguage($i18n)" class="" type="button">Переключалка</button>
-        <button @click="changeThemes" class="header__themes" type="button">
+      <div class="header__actions" v-if="!isMobileView">
+        <button @click="changeLanguage($i18n)" class="header__lang header__btn" type="button">
+          {{ $t('header.language') }}
+        </button>
+        <button @click="changeThemes" class="header__themes header__btn" type="button">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_578_178)">
               <path
@@ -64,7 +67,7 @@
     </div>
 
     <a-popup :visible="showPopup" @close="showPopup = false" class="s-header__popup">
-      <m-form-popup title="Оставь заявку на обучение" />
+      <m-form-popup title="Оставь заявку " />
     </a-popup>
   </header>
 </template>
@@ -84,6 +87,8 @@ const props = defineProps({
 
 const isScrolled = ref(false);
 const isActiveBurger = ref(false);
+
+// const menuItems = $tm("menu");
 
 const menuItems = ref([
   {

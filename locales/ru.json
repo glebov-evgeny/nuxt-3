@@ -1,4 +1,19 @@
 {
+  "header": {
+    "language": "RU"
+  },
+  "menu": [
+    {
+      "name": "index",
+      "anchor": "Обо мне",
+      "link": "/"
+    },
+    {
+      "name": "test",
+      "anchor": "Тест",
+      "link": "/test"
+    }
+  ],
   "title": "ru",
   "description": ".,."
 }

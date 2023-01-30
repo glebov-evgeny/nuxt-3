@@ -1,4 +1,19 @@
 {
+  "header": {
+    "language": "EN"
+  },
+  "menu": [
+    {
+      "name": "index",
+      "anchor": "About",
+      "link": "/"
+    },
+    {
+      "name": "test",
+      "anchor": "Test",
+      "link": "/test"
+    }
+  ],
   "title": "en/.",
   "description": ".sa/."
 }
