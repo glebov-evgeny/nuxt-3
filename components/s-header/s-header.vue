@@ -21,8 +21,9 @@
         </nuxt-link>
       </div>
       <!-- {{ $tm("menu") }} -->
+      {{ $tm('menu') }}
       <div class="header__menu" :class="[{ open: isActiveBurger }]">
-        <m-menu :items="menuItems" />
+        <m-menu :items="$tm('menu')" />
       </div>
       <button type="button" @click="clickBurger" v-if="isMobileView" class="header__burger">
         <svg
@@ -87,26 +88,6 @@ const props = defineProps({
 
 const isScrolled = ref(false);
 const isActiveBurger = ref(false);
-
-// const menuItems = $tm("menu");
-
-const menuItems = ref([
-  {
-    name: 'index',
-    anchor: 'Страница 1',
-    link: '/',
-  },
-  {
-    name: 'test',
-    anchor: 'Страница 2',
-    link: '/test',
-  },
-  {
-    name: 'test',
-    anchor: 'Якорь',
-    link: '#test',
-  },
-]);
 
 // eslint-disable-next-line no-unused-vars
 const scrollPage = () => {
