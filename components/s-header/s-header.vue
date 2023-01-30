@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="[{ invisible: isScrolled }]">
+  <header class="header">
     <div class="container header__container">
       <div class="header__logo">
         <nuxt-link to="/">
@@ -20,28 +20,9 @@
           </svg>
         </nuxt-link>
       </div>
-      <div class="header__menu" :class="[{ open: isActiveBurger }]">
+      <div class="header__menu" :class="[{ open: isActiveBurger && isMobileView }]">
         <m-menu :items="$tm('menu')" />
       </div>
-      <button type="button" @click="clickBurger" v-if="isMobileView" class="header__burger">
-        <svg
-          class="ham hamRotate hamR"
-          :class="[{ active: isActiveBurger }]"
-          viewBox="0 0 100 100"
-          width="40"
-          ref="ham"
-        >
-          <path
-            class="line top"
-            d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
-          />
-          <path class="line middle" d="m 70,50 h -40" />
-          <path
-            class="line bottom"
-            d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
-          />
-        </svg>
-      </button>
       <div class="header__actions" v-if="!isMobileView">
         <button @click="changeLanguage($i18n)" class="header__lang header__btn" type="button">
           {{ $t('header.language') }}
@@ -63,6 +44,25 @@
           </svg>
         </button>
       </div>
+      <button type="button" @click="clickBurger" v-if="isMobileView" class="header__burger">
+        <svg
+          class="ham hamRotate hamR"
+          :class="[{ active: isActiveBurger }]"
+          viewBox="0 0 100 100"
+          width="40"
+          ref="ham"
+        >
+          <path
+            class="line top"
+            d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+          />
+          <path class="line middle" d="m 70,50 h -40" />
+          <path
+            class="line bottom"
+            d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+          />
+        </svg>
+      </button>
     </div>
 
     <a-popup :visible="showPopup" @close="showPopup = false" class="s-header__popup">
@@ -86,6 +86,20 @@ const props = defineProps({
 
 const isScrolled = ref(false);
 const isActiveBurger = ref(false);
+
+// eslint-disable-next-line no-unused-vars
+const hideYScroll = () => {
+  const htmlWrapper = document.querySelector('html');
+  const bodyWrapper = document.querySelector('body');
+
+  if (isActiveBurger.value === true) {
+    htmlWrapper.style.overflow = 'hidden';
+    bodyWrapper.style.overflow = 'hidden';
+  } else {
+    htmlWrapper.style.overflow = 'initial';
+    bodyWrapper.style.overflow = 'initial';
+  }
+};
 
 // eslint-disable-next-line no-unused-vars
 const scrollPage = () => {
@@ -117,6 +131,6 @@ const changeLanguage = (lang) => {
 };
 
 onMounted(() => {
-  scrollPage();
+  // scrollPage();
 });
 </script>
