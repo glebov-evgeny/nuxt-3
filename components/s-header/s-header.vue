@@ -20,8 +20,6 @@
           </svg>
         </nuxt-link>
       </div>
-      <!-- {{ $tm("menu") }} -->
-      {{ $tm('menu') }}
       <div class="header__menu" :class="[{ open: isActiveBurger }]">
         <m-menu :items="$tm('menu')" />
       </div>
