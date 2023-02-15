@@ -1,24 +1,23 @@
-@import '@/assets/styles/tools/mixins';
-
 .m-menu {
   &__list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
   }
 
   &__item {
-    // margin-right: rem(14);
+    margin-right: rem(8);
 
-    // @include _1440 {
-    //   margin-right: rem(24);
-    // }
-    // @include _768 {
-    //   background: #9b2b3e;
-    // }
-    // &:last-child {
-    //   margin-right: 0;
-    // }
+    @media all and (min-width: 1140px) {
+      margin-right: rem(14);
+    }
+
+    @media all and (min-width: 1430px) {
+      margin-right: rem(24);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -28,6 +27,24 @@
 
     &:hover {
       color: var(--color-link-hover);
+    }
+
+    &.active {
+      color: var(--color-link-hover);
+    }
+  }
+
+  &--horizontal & {
+    &__list {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &--vertical & {
+    &__list {
+      flex-direction: column;
+      align-items: initial;
     }
   }
 }

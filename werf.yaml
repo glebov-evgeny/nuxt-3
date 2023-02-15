@@ -25,10 +25,14 @@ cleanup:
       last: 2
 ---
 image: app
-from: node:14-alpine
+from: node:18.14-alpine
 docker:
   WORKDIR: /app
-  ENTRYPOINT: [ "yarn", "start" ]
+  ENTRYPOINT:
+    - /entrypoint.sh
+  CMD:
+    - yarn
+    - start
 git:
   - add: /
     to: /app
@@ -42,6 +46,11 @@ git:
         - package.json
       beforeSetup:
         - "**/*"
+  - add: /.helm/cmd/app
+    to: /
+    stageDependencies:
+      setup:
+        - "**/*"
 shell:
   beforeInstall:
   - apk --update add bash curl python3 make g++
@@ -52,5 +61,11 @@ shell:
   beforeSetup:
   - cd /app
   - export NODE_ENV="{{ .EnvName }}"
+  - export NUXT_ENV_API_URL="BUILDTEMPLATE-NUXT-ENV-API-URL"
+  - export SITE_FB_PIXEL="BUILDTEMPLATE-SITE-FB-PIXEL"
+  - export SITE_GTM="BUILDTEMPLATE-SITE-GTM"
+  - export NUXT_ENV_S3BACKET="BUILDTEMPLATE-NUXT-ENV-S3BACKET"
   - yarn build
+  setup:
+  - chmod +x /*.sh
 ---

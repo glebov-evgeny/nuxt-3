@@ -1,12 +1,12 @@
 <template>
-  <div class="a-popup" v-if="visible">
+  <div v-if="visible" class="a-popup" :class="classes">
     <div class="a-popup__backdrop" @click="closePopup" @keydown.esc="closePopup" />
     <div class="a-popup__container" :style="`max-width: ${width}`">
       <div class="a-popup__close" @click="closePopup" @keydown.esc="closePopup" />
-      <div class="a-popup__content" v-if="type !== 'iframe'">
+      <div v-if="type !== 'iframe'" class="a-popup__content">
         <slot />
       </div>
-      <div class="a-popup__iframe" v-else>
+      <div v-else class="a-popup__iframe">
         <iframe
           title=""
           :src="link"
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   visible: {
     type: Boolean,
     default: false,
@@ -38,11 +38,20 @@ defineProps({
     type: String,
     default: '100%',
   },
+  fullscreen: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
 });
 
 const emit = defineEmits(['close']);
 
 const closePopup = () => emit('close');
+
+const classes = computed(() => ({
+  [`a-popup--fullscreen`]: props.fullscreen,
+}));
 </script>
 
 <style lang="scss">

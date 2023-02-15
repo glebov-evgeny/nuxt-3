@@ -1,13 +1,10 @@
-@use '@/assets/styles/tools/mixins' as *;
-
 html,
 body {
   height: 100%;
 }
 
 body {
-  color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: var(--color-bg);
   font-family: 'TT Norms', sans-serif;
   font-size: 16px;
 }
@@ -17,49 +14,145 @@ a {
   text-decoration: none;
 }
 
-button {
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
+:root {
+  --layout-width: 100%;
+  --layout-padding: 5rem; // 80px
+  --layout-v-padding: 3.75rem; // 60px
 
-.s-layout {
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  box-sizing: border-box;
-  width: 100%;
-  min-width: rem(360);
-  height: 100%;
-  margin: auto;
-  color: #16182b;
-}
+  @media all and (min-width: 768px) {
+    --layout-width: 44.25rem; // 708px
+  }
 
-.container {
-  width: 100%;
-  max-width: rem(1400);
-  margin: 0 auto;
-  padding: 0 rem(20);
+  @media all and (min-width: 1140px) {
+    --layout-width: 62rem; // 992px
+  }
 
-  @media all and (min-width: 992px) {
-    padding: 0 rem(40);
+  @media all and (min-width: 1440px) {
+    --layout-width: 90rem; // 1440px
   }
 }
 
-.main {
-  padding-top: rem(50);
+.l-default,
+.l-wide {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  transition: max-width 0.6s ease;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
+.s-padding {
+  padding: var(--a-padding-x10) var(--a-padding-x4);
+
+  @media screen and (min-width: 768px) {
+    padding: var(--a-padding-x12) var(--a-padding-x8);
+  }
+
+  @media screen and (min-width: 1140px) {
+    padding: var(--a-padding-x15) var(--a-padding-x17);
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #ff4800;
-  border-radius: rem(4);
+.s-margin {
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: rem(24) auto;
+  }
+
+  @media screen and (min-width: 1140px) {
+    margin: rem(40) auto;
+  }
 }
 
-::-webkit-scrollbar {
-  width: rem(8);
+// stylelint-disable-next-line
+#__nuxt {
+  height: 100%;
+}
+
+.s-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.s-main {
+  flex: 1 auto;
+  width: 100%;
+}
+
+.s-title {
+  font-size: rem(34);
+  font-weight: 500;
+  line-height: rem(36);
+
+  @media screen and (min-width: 768px) {
+    font-size: rem(34);
+    font-weight: 500;
+    line-height: rem(36);
+  }
+
+  @media screen and (min-width: 1140px) {
+    font-size: rem(48);
+    font-weight: 500;
+    line-height: rem(52);
+  }
+
+  &-h1 {
+    font-size: rem(32);
+    font-weight: 500;
+    line-height: rem(40);
+
+    @media screen and (min-width: 768px) {
+      font-size: rem(40);
+    }
+    @media screen and (min-width: 1140px) {
+      font-size: rem(58);
+      line-height: rem(58);
+    }
+  }
+}
+
+.s-border {
+  @media screen and (min-width: 768px) {
+    border-radius: var(--border-radius-x3);
+  }
+}
+
+.lander-message {
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  right: 0;
+  width: auto;
+  padding: var(--a-padding-x6);
+  color: var(--color-text-contrast);
+  background: var(--color-bg-tertiary);
+
+  &-item {
+    margin-bottom: var(--a-padding-x1);
+
+    strong {
+      width: 50%;
+    }
+
+    span {
+      margin-left: var(--a-padding-x3);
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: var(--a-padding-x1);
+    right: var(--a-padding-x4);
+    cursor: pointer;
+
+    &::after {
+      content: '\2715';
+    }
+  }
+
+  @media screen and (min-width: 1140px) {
+    font-size: rem(48);
+    font-weight: 500;
+    line-height: rem(52);
+  }
 }

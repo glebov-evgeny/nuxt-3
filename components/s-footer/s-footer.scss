@@ -1,10 +1,17 @@
-@import '@/assets/styles/tools/mixins';
-
 .s-footer {
   padding: var(--a-padding-x8) 0;
   background-color: var(--color-bg-contrast);
 
+  &__container {
+    padding: 0 var(--a-padding-x4);
+
+    @media all and (min-width: 1430px) {
+      padding: 0;
+    }
+  }
+
   &__logo {
+    width: rem(167);
     margin-bottom: rem(20);
 
     @media all and (min-width: 768px) {
@@ -48,17 +55,6 @@
     }
 
     .m-menu {
-      &__list {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-        @media all and (min-width: 768px) {
-          flex-direction: row;
-          justify-content: space-between;
-        }
-      }
-
       &__item {
         line-height: rem(40);
 
@@ -104,6 +100,7 @@
       margin-bottom: rem(8);
       font-size: rem(14);
       font-weight: 500;
+      transition: all 0.4s ease;
 
       @media all and (min-width: 1430px) {
         display: inline;
@@ -114,6 +111,10 @@
 
       &:first-child {
         margin-left: 0;
+      }
+
+      &:hover {
+        color: var(--color-link-hover);
       }
     }
   }

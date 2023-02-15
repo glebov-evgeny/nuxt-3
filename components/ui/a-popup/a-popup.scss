@@ -1,5 +1,3 @@
-@import '@/assets/styles/tools/mixins';
-
 .a-popup {
   position: fixed;
   z-index: 1001;
@@ -93,6 +91,13 @@
     h6,
     p {
       margin-bottom: 1em;
+    }
+  }
+
+  &--fullscreen & {
+    &__container {
+      width: 100%;
+      height: 100%;
     }
   }
 }

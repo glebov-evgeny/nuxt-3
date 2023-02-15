@@ -1,4 +1,4 @@
 // Partials
-@forward 'reset';
-@forward 'fonts';
-@forward 'global';
+@import 'reset';
+@import 'global';
+@import 'fonts';

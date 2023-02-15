@@ -1,107 +1,114 @@
-@import '@/assets/styles/tools/mixins';
-/* stylelint-disable */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: rem(5) 0;
-  color: var(--color-text);
-  background: var(--color-bg);
-  transition: all 0.3s ease;
+.s-header {
+  position: relative;
+  padding: var(--a-padding-x3) 0;
+  background-color: var(--color-bg-contrast);
 
-  &.invisible {
-    transform: translateY(-100%);
+  @media all and (min-width: 768px) {
+    padding: var(--a-padding-x3) 0 var(--a-padding-x4);
+  }
+
+  @media all and (min-width: 1140px) {
+    padding: var(--a-padding-x6) 0;
+  }
+
+  &__logo {
+    width: rem(167);
   }
 
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
+    flex-wrap: wrap;
+    padding: 0 var(--a-padding-x4);
 
-  &__logo {
-    max-width: rem(40);
-    opacity: 0.1;
-    &-pic {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
+    @media all and (min-width: 1430px) {
+      flex-wrap: none;
+      padding: 0;
     }
   }
-  &__actions {
-    display: flex;
-  }
-  &__btn {
-    color: var(--color-link);
-    font-weight: 500;
-    // border: rem(2) solid var(--color-text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--padding-step);
-    border-radius: var(--border-radius-x1);
-    margin-left: rem(10);
-  }
+
   &__menu {
-    background: var(--color-bg);
-    position: fixed;
-    top: rem(50);
-    left: 0;
+    order: 1;
     width: 100%;
-    height: 0;
-    transition: 0.3s;
-    overflow: hidden;
-    &.open {
-      // padding: rem(20);
-      height: rem(80);
-      border-radius: 0 0 rem(12) rem(12);
+    margin-top: rem(12);
+
+    @media all and (min-width: 1440px) {
+      order: 0;
+      width: auto;
+      margin-top: 0;
+      margin-left: rem(44);
+    }
+  }
+
+  &__menu-popup {
+    position: absolute;
+    z-index: 10;
+    top: rem(64);
+    right: 0;
+    left: 0;
+    padding: var(--a-padding-x2) var(--a-padding-x4) var(--a-padding-x5);
+    background-color: var(--color-bg-contrast);
+    border-top: rem(1) solid var(--color-border-menu);
+    box-shadow: 0 1px 4px rgba(#cdd9ed, 0.4);
+  }
+
+  &__menu-mobile {
+    .m-menu {
+      &__item {
+        margin-right: 0;
+        padding-top: var(--a-padding-x2);
+        padding-bottom: var(--a-padding-x2);
+        border-bottom: rem(1) solid var(--color-border-menu);
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    margin-left: rem(2);
+
+    @media all and (min-width: 769px) {
+      margin-left: rem(32);
+    }
+  }
+
+  &__phone {
+    margin-left: auto;
+    line-height: rem(20);
+
+    &-number {
+      display: none;
+      font-size: rem(14);
+      font-weight: 500;
+      transition: all 0.4s ease;
+
+      @media all and (min-width: 769px) {
+        display: block;
+      }
+
+      &:hover {
+        color: var(--color-link-hover);
+      }
+    }
+  }
+
+  &__button {
+    margin-right: rem(2);
+
+    @media all and (min-width: 576px) {
+      margin-right: rem(8);
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
   &__burger {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .ham {
-      cursor: pointer;
-      user-select: none;
-      transition: transform 0.5s;
-    }
-
-    .hamRotate.active {
-      transform: rotate(45deg);
-    }
-
-    .hamRotate180.active {
-      transform: rotate(180deg);
-    }
-
-    .line {
-      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-      fill: none;
-      stroke: var(--color-text);
-      stroke-width: 6.5;
-      stroke-linecap: round;
-    }
-
-    .hamR .top {
-      stroke-dasharray: 40 121;
-    }
-
-    .hamR .bottom {
-      stroke-dasharray: 40 121;
-    }
-
-    .hamR.active .top {
-      stroke-dashoffset: -68px;
-    }
-
-    .hamR.active .bottom {
-      stroke-dashoffset: -68px;
-    }
+    width: rem(36);
+    height: rem(36);
   }
 }
-/* stylelint-enable */

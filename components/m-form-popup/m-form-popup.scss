@@ -1,5 +1,11 @@
-@import '@/assets/styles/tools/mixins';
-
 .m-form-popup {
   max-width: rem(648);
+
+  &__input {
+    margin-bottom: rem(16);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

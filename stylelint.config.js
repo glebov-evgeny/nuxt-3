@@ -10,13 +10,5 @@ module.exports = {
         ignorePseudoElements: ['v-deep'],
       },
     ],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        vue: 'never',
-        js: 'never',
-      },
-    ],
   },
 };

@@ -2,37 +2,31 @@ module.exports = {
   root: true,
   env: {
     browser: true,
+    es2021: true,
     node: true,
   },
   extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
-    'prettier',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:nuxt/recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:prettier/recommended',
   ],
+  parserOptions: {
+    ecmaVersion: "latest",
+    parser: "@typescript-eslint/parser",
+    sourceType: "module",
+  },
   plugins: [
-    'html',
-    'import',
+    '@typescript-eslint',
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'max-len': ['error', { ignorePattern: 'd="([\\s\\S]*?)"', code: 160 }],
+    'max-len': ['error', { ignorePattern: 'd="([\\s\\S]*?)"', code: 120 }],
     'no-shadow': ['error', { allow: ['state'] }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-        vue: 'never',
-      },
-    ],
     'vue/multi-word-component-names': 0,
   },
   settings: {
-
+    'import/resolver': {},
   },
 };

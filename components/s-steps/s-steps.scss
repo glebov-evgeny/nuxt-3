@@ -1,0 +1,191 @@
+.s-steps {
+  background: var(--color-text-contrast);
+
+  &__title {
+    margin-bottom: rem(50);
+
+    @media all and (min-width: 768px) {
+      margin-bottom: rem(24);
+    }
+
+    @media all and (min-width: 1140px) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media all and (min-width: 768px) {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      row-gap: 24px;
+    }
+
+    &-item {
+      width: 100%;
+      margin-bottom: rem(32);
+      text-align: center;
+      transition: 0.3s;
+
+      @media all and (min-width: 768px) {
+        width: calc(50% - 20px);
+        margin-bottom: rem(0);
+      }
+
+      @media all and (min-width: 1140px) {
+        width: 24%;
+      }
+    }
+
+    @for $i from 1 through 4 {
+      &-item {
+        &:nth-child(#{$i}) {
+          // stylelint-disable-next-line
+          .s-steps__item-logo {
+            animation-delay: #{$i * 1.2}s;
+
+            path,
+            rect {
+              animation-delay: #{$i * 1.2}s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    &-top {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto rem(16);
+      @media all and (min-width: 1140px) {
+        width: rem(200);
+        height: rem(200);
+        margin: 0 auto rem(20);
+      }
+    }
+
+    &-count {
+      color: var(--color-text);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 13px;
+      @media all and (min-width: 1140px) {
+        position: absolute;
+        top: 0;
+        right: auto;
+        left: 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 125px;
+      height: 125px;
+      background: var(--color-bg);
+      border: 1px solid #d3d8e3;
+      border-radius: 50%;
+      animation-name: next-steps-background;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      @media all and (min-width: 1140px) {
+        width: 200px;
+        height: 200px;
+      }
+
+      svg {
+        width: 85px;
+        height: 85px;
+        @media all and (min-width: 1140px) {
+          width: 125px;
+          height: 125px;
+        }
+
+        .red {
+          fill: #ff0a47;
+          animation: none;
+        }
+
+        .outline-white {
+          animation: none;
+        }
+
+        path,
+        rect {
+          animation-name: next-steps-vector;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: rem(8);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      @media all and (min-width: 1140px) {
+        margin-bottom: rem(16);
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    &-description {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  @keyframes next-steps-background {
+    0% {
+      background: var(--color-bg);
+    }
+
+    5% {
+      background: var(--color-button-text-primary-hover);
+    }
+
+    25% {
+      background: var(--color-button-text-primary-hover);
+    }
+
+    30% {
+      background: var(--color-bg);
+    }
+  }
+
+  @keyframes next-steps-vector {
+    0% {
+      fill: #0d1140;
+      stroke: #fff;
+    }
+
+    5% {
+      fill: #0d1140;
+      stroke: #fff;
+    }
+
+    25% {
+      fill: #0d1140;
+      stroke: #fff;
+    }
+
+    30% {
+      fill: #f7f9fd;
+      stroke: #0d1140;
+    }
+  }
+}

@@ -1,6 +1,6 @@
-@import '@/assets/styles/tools/mixins';
-
 .a-input {
+  position: relative;
+
   &__textfield {
     width: 100%;
     border: 0;
@@ -13,6 +13,30 @@
 
     &--medium {
       padding: var(--a-padding-x3) var(--a-padding-x4);
+    }
+
+    &--large {
+      padding: var(--a-padding-x4) var(--a-padding-x4);
+    }
+
+    &--search {
+      padding: var(--a-padding-x4) var(--a-padding-x13) var(--a-padding-x4) var(--a-padding-x4);
+    }
+  }
+
+  &--search {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: rem(16);
+      width: rem(24);
+      height: rem(24);
+      background-image: url('/images/icons/search.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      transform: translateY(-50%);
     }
   }
 }

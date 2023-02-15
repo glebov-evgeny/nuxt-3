@@ -1,0 +1,132 @@
+.s-thanks {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-text-contrast);
+  background-color: var(--color-bg-tertiary);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::before {
+    width: rem(157);
+    height: rem(140);
+    background-image: url('/images/bg-thanks-decor-left-mobile.webp');
+
+    @media all and (min-width: 1140px) {
+      width: rem(373);
+      height: rem(577);
+      background-image: url('/images/bg-thanks-decor-left-desktop.webp');
+    }
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    width: rem(323);
+    height: rem(376);
+    background-image: url('/images/bg-thanks-decor-right-mobile.webp');
+
+    @media all and (min-width: 1140px) {
+      top: 0;
+      right: 0;
+      bottom: initial;
+      width: rem(587);
+      height: rem(600);
+      background-image: url('/images/bg-thanks-decor-right-desktop.webp');
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    padding: rem(82) var(--a-padding-x4) rem(393);
+    background-image: url('/images/bg-thanks-mobile.webp');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    @media all and (min-width: 768px) {
+      padding: rem(144) var(--a-padding-x11);
+      background-image: url('/images/bg-thanks-tablet.webp');
+    }
+
+    @media all and (min-width: 1140px) {
+      max-width: var(--layout-width);
+      margin: 0 auto;
+      padding: rem(196) 0;
+      background-image: url('/images/bg-thanks-desktop.webp');
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+    font-size: rem(32);
+    font-weight: 500;
+    line-height: rem(40);
+    text-transform: uppercase;
+
+    &-break {
+      display: block;
+    }
+
+    @media all and (min-width: 768px) {
+      margin-bottom: rem(20);
+      font-size: rem(40);
+      line-height: rem(40);
+
+      &-break {
+        display: inline;
+      }
+    }
+
+    @media all and (min-width: 1140px) {
+      margin-bottom: rem(24);
+      font-size: rem(58);
+      line-height: rem(58);
+    }
+  }
+
+  &__description {
+    margin-bottom: rem(32);
+    font-size: rem(22);
+    font-weight: 400;
+    line-height: rem(30);
+
+    @media all and (min-width: 768px) {
+      margin-bottom: rem(36);
+      font-size: rem(20);
+      font-weight: 500;
+      line-height: rem(24);
+
+      &-break {
+        display: block;
+      }
+    }
+
+    @media all and (min-width: 1140px) {
+      margin-bottom: rem(32);
+      font-size: rem(32);
+      line-height: rem(40);
+
+      &-break {
+        display: inline;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @media all and (min-width: 768px) {
+      max-width: rem(250);
+    }
+
+    @media all and (min-width: 1140px) {
+      max-width: rem(311);
+    }
+  }
+}

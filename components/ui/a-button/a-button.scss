@@ -1,7 +1,5 @@
-@import '@/assets/styles/tools/mixins';
-
 .a-button {
-  padding: 0 var(--a-padding-x6);
+  width: auto;
   border-width: rem(1);
   border-style: solid;
   border-radius: var(--border-radius-x2);
@@ -12,12 +10,30 @@
     cursor: pointer;
   }
 
+  &__label {
+    font-size: inherit;
+  }
+
+  &--small {
+    height: rem(38);
+    padding: 0 var(--a-padding-x4);
+    font-size: rem(14);
+  }
+
   &--medium {
-    height: rem(40);
+    height: rem(42);
+    padding: 0 var(--a-padding-x6);
   }
 
   &--large {
-    height: rem(48);
+    height: rem(50);
+    padding: 0 var(--a-padding-x6);
+    font-size: rem(18);
+  }
+
+  &--xlarge {
+    height: rem(54);
+    font-size: rem(18);
   }
 
   &--icon {
@@ -50,6 +66,30 @@
     }
   }
 
+  &--secondary {
+    color: var(--color-button-text-secondary);
+    background-color: var(--color-button-bg-secondary);
+    border-color: var(--color-button-border-secondary);
+
+    &:hover {
+      color: var(--color-button-text-secondary-hover);
+      background-color: var(--color-button-bg-secondary-hover);
+      border-color: var(--color-button-border-secondary-hover);
+    }
+  }
+
+  &--tertiary {
+    color: var(--color-button-text-tertiary);
+    background-color: var(--color-button-bg-tertiary);
+    border-color: var(--color-button-border-tertiary);
+
+    &:hover {
+      color: var(--color-button-text-tertiary-hover);
+      background-color: var(--color-button-bg-tertiary-hover);
+      border-color: var(--color-button-border-tertiary-hover);
+    }
+  }
+
   &--outline {
     color: var(--color-button-text-outline);
     background-color: var(--color-button-bg-outline);
@@ -59,6 +99,30 @@
       color: var(--color-button-text-outline-hover);
       background-color: var(--color-button-bg-outline-hover);
       border-color: var(--color-button-border-outline-hover);
+    }
+  }
+
+  &--outline-secondary {
+    color: var(--color-button-text-outline-secondary);
+    background-color: var(--color-button-bg-outline-secondary);
+    border-color: var(--color-button-border-outline-secondary);
+
+    &:hover {
+      color: var(--color-button-text-outline-secondary-hover);
+      background-color: var(--color-button-bg-outline-secondary-hover);
+      border-color: var(--color-button-border-outline-secondary-hover);
+    }
+  }
+
+  &--outline-grey {
+    color: var(--color-button-text-outline-grey);
+    background-color: var(--color-button-bg-outline-grey);
+    border-color: var(--color-button-border-outline-grey);
+
+    &:hover {
+      color: var(--color-button-text-outline-grey-hover);
+      background-color: var(--color-button-bg-outline-grey-hover);
+      border-color: var(--color-button-border-outline-grey-hover);
     }
   }
 

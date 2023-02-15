@@ -4,23 +4,30 @@
     <div class="a-input__container">
       <textarea v-if="type == 'textarea'" />
       <input
-        v-else
-        class="a-input__textfield"
-        v-bind="$attrs"
-        :class="classesField"
+        v-else-if="type == 'search'"
+        ref="a-input"
         v-model="valueThis"
+        class="a-input__textfield"
+        :class="classesField"
+        type="text"
+        :placeholder="placeholder"
+        :disabled="disabled"
+      />
+      <input
+        v-else
+        ref="a-input"
+        v-model="valueThis"
+        class="a-input__textfield"
+        :class="classesField"
         :type="type"
         :placeholder="placeholder"
         :disabled="disabled"
-        ref="a-input"
       />
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-
 const props = defineProps({
   modelValue: {
     type: String,
@@ -56,10 +63,12 @@ const emit = defineEmits(['update:modelValue']);
 const classes = computed(() => ({
   'a-input': true,
   [`a-input--${props.size}`]: true,
+  [`a-input--search`]: props.type === 'search',
 }));
 
 const classesField = computed(() => ({
   [`a-input__textfield--${props.size}`]: true,
+  [`a-input__textfield--search`]: props.type === 'search',
 }));
 
 const valueThis = computed({

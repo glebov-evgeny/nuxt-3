@@ -1,13 +1,19 @@
 <template>
-  <button class="a-button" type="button" :class="classes" :disabled="disabled">
+  <button
+    class="a-button"
+    type="button"
+    :class="classes"
+    :disabled="disabled"
+    :style="[`width: ${width};`]"
+    role="button"
+    :area-label="label"
+  >
     <img v-if="hasIconLink" :src="iconLink" alt="" class="a-button__icon" />
     <span v-if="!hasIconLink" class="a-button__label">{{ label }}</span>
   </button>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-
 const props = defineProps({
   label: {
     type: String,
@@ -36,14 +42,22 @@ const props = defineProps({
   type: {
     type: String,
     validator(value) {
-      return ['primary', 'secondary', 'accent', 'outline', 'icon'].indexOf(value) !== -1;
+      return (
+        ['primary', 'secondary', 'tertiary', 'accent', 'outline', 'outline-grey', 'outline-secondary', 'icon'].indexOf(
+          value,
+        ) !== -1
+      );
     },
     default: 'primary',
+  },
+  width: {
+    type: String,
+    default: '',
+    required: false,
   },
 });
 
 const classes = computed(() => ({
-  'a-button': true,
   [`a-button--${props.size}`]: true,
   [`a-button--${props.type}`]: true,
   'a-button--disabled': props.disabled,

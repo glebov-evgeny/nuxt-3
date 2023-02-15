@@ -1,15 +1,17 @@
 <template>
-  <m-form :title="title" class="m-form-popup">
+  <m-form :title="title" :submit-disabled="!validFlag" class="m-form-popup" @on-submit="sendForm">
     <template #inputs>
-      <a-input class="m-form-popup__input" id="popup-form-name" placeholder="Имя" v-model="fieldsData.name" />
-      <a-input class="m-form-popup__input" id="popup-form-phone" placeholder="Телефон" v-model="fieldsData.phone" />
-      <a-input class="m-form-popup__input" id="popup-form-email" placeholder="Почта" v-model="fieldsData.email" />
+      <a-input id="popup-form-name" v-model="fieldsData.name" class="m-form-popup__input" placeholder="Имя" />
+      <a-input id="popup-form-phone" v-model="fieldsData.phone" class="m-form-popup__input" placeholder="Телефон" />
+      <a-input id="popup-form-email" v-model="fieldsData.email" class="m-form-popup__input" placeholder="Почта" />
     </template>
   </m-form>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+const { $lander } = useNuxtApp();
+const route = useRoute();
+const emit = defineEmits(['onSend']);
 
 defineProps({
   title: {
@@ -18,26 +20,53 @@ defineProps({
   },
 });
 
-const fieldsData = ref({
+let fieldsData = reactive({
   name: '',
-  phone: '',
   email: '',
+  phone: '',
 });
-</script>
 
-<style lang="scss">
-@import '@/assets/styles/tools/mixins';
+let errors = reactive({
+  name: true,
+  email: true,
+  phone: true,
+});
 
-.m-form-popup {
-  &__input {
-    margin-bottom: rem(16);
+let validFlag = ref(false);
+let validPhone = ref(false);
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+const checkedValidateError = () => {
+  errors.name = /^([A-ZА-ЯЁ][-,a-z, a-яё. ']+[ ]*)+$/i.test(fieldsData.name);
+  errors.email = $lander.valid([{ value: fieldsData.email, type: 'email' }]);
+  errors.phone = validPhone && fieldsData.phone !== '';
+  return errors.name && errors.email && errors.phone;
+};
+
+fieldsData = reactive({ ...$lander.storage.load('popupform') });
+
+watch(
+  fieldsData,
+  () => {
+    validFlag.value = checkedValidateError();
+  },
+  { immediate: true },
+);
+
+const sendForm = () => {
+  if (validFlag) {
+    $lander.storage.save('popupform', fieldsData);
+    $lander
+      .send(
+        fieldsData,
+        {},
+        route.name === 'edu-platform-slug' || route.name === 'edu-platform' ? route.path : undefined,
+      )
+      .then(() => {
+        emit('onSend');
+      });
   }
-}
-</style>
+};
+</script>
 
 <style lang="scss">
 @import './m-form-popup.scss';

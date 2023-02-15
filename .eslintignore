@@ -1,8 +1,0 @@
-node_modules/*
-build/*
-dist/*
-static
-/.git
-/.vscode
-.nuxt
-.idea
