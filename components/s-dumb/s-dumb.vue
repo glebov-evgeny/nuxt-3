@@ -1,6 +1,6 @@
 <template>
   <section class="dumb">
-    <h2>{{ $t('title') }}</h2>
+    <h2>1) {{ $t('title') }}</h2>
     <p>{{ $t('description') }}</p>
   </section>
 </template>
