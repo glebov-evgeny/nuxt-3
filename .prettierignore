@@ -5,6 +5,7 @@ node_modules
 .nuxt
 .husky
 .env
+.dist
 idea
 werf.yaml
 werf-giterminism.yaml

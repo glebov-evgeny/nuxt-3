@@ -50,7 +50,6 @@ export default defineNuxtConfig({
   css: ['@/assets/styles/main.scss'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui', '~/components/icons'],
-
   runtimeConfig: {
     public: {
       baseURL: process.env.NUXT_ENV_API_URL,
