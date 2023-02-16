@@ -18,7 +18,6 @@ const handleResize = () => {
 
 const isLightThemes = ref(false);
 const changeColorThemes = () => {
-  console.log('vvv');
   isLightThemes.value = !isLightThemes.value;
 };
 onMounted(() => {
