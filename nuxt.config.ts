@@ -51,8 +51,6 @@ export default defineNuxtConfig({
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui', '~/components/icons'],
   runtimeConfig: {
-    public: {
-      baseURL: '/nuxt-3/',
-    },
+    baseURL: '/nuxt-3/',
   },
 });
