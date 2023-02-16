@@ -3,7 +3,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 import eslintPlugin from 'vite-plugin-eslint';
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   debug: true,
   vite: {
     plugins: [eslintPlugin()],
