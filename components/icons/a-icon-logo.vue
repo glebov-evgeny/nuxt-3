@@ -1,6 +1,5 @@
 <template>
-  <nuxt-img src="/images/icons/logo.svg" />
-  <img src="/images/icons/logo.svg" alt="test" />
+  <img src="/images/icons/logo.svg" alt="logo" />
 </template>
 
 <script>
