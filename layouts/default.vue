@@ -1,6 +1,5 @@
 <template>
   <div class="s-layout">
-    <NuxtLoadingIndicator color="#ff0a47" />
     <s-header />
     <NuxtPage />
     <s-footer />

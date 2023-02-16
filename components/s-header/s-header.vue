@@ -7,14 +7,14 @@
       <div v-if="!store.isMobile" class="s-header__menu">
         <m-menu :items="menuItems" />
       </div>
-      <a class="s-header__phone" href="tel:74952800827">
+      <a class="s-header__phone" href="tel:+79162176557">
         <img
           v-if="showIcons"
           class="s-header__phone-icon"
           src="/images/icons/phone.svg"
-          alt="Позвоните нам: +7 495 280 08 27"
+          alt="Позвоните нам: +7 916 217 65 57"
         />
-        <span class="s-header__phone-number" aria-label="Позвоните нам: +7 495 280 08 27">+7 495 280 08 27</span>
+        <span class="s-header__phone-number" aria-label="Позвоните нам: +7 916 217 65 57">+7 916 217 65 57</span>
       </a>
       <div class="s-header__actions">
         <a-button
@@ -58,33 +58,13 @@ const store = useDeviceStore();
 const menuItems = ref([
   {
     name: 'index',
-    anchor: 'Об Академии',
+    anchor: 'Обо мне',
     link: '/',
   },
   {
     name: 'catalog',
-    anchor: 'Профессии',
-    link: '/catalog',
-  },
-  {
-    name: 'career',
-    anchor: 'Центр карьеры',
-    link: '/career',
-  },
-  {
-    name: 'media',
-    anchor: 'Медиатека',
-    link: '#',
-  },
-  {
-    name: 'documents',
-    anchor: 'Документы Академии',
-    link: '#',
-  },
-  {
-    name: 'students',
-    anchor: 'Студентам',
-    link: '#',
+    anchor: 'Опыт работы',
+    link: '/',
   },
 ]);
 
