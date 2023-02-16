@@ -45,17 +45,18 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
     },
+    baseURL: '/nuxt-3/',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/main.scss'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui', '~/components/icons'],
-  runtimeConfig: {
-    // public: {
-    //   baseURL: '/nuxt-3/',
-    // },
-    // app: {
-    //   baseURL: '/nuxt-3/',
-    // },
-  },
+  // runtimeConfig: {
+  // public: {
+  //   baseURL: '/nuxt-3/',
+  // },
+  // app: {
+  //   baseURL: '/nuxt-3/',
+  // },
+  // },
 });
