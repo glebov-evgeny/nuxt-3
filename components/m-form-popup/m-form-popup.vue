@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-const { $lander } = useNuxtApp();
+// const { $lander } = useNuxtApp();
 const route = useRoute();
 const emit = defineEmits(['onSend']);
 
@@ -37,12 +37,12 @@ let validPhone = ref(false);
 
 const checkedValidateError = () => {
   errors.name = /^([A-ZА-ЯЁ][-,a-z, a-яё. ']+[ ]*)+$/i.test(fieldsData.name);
-  errors.email = $lander.valid([{ value: fieldsData.email, type: 'email' }]);
+  // errors.email = $lander.valid([{ value: fieldsData.email, type: 'email' }]);
   errors.phone = validPhone && fieldsData.phone !== '';
   return errors.name && errors.email && errors.phone;
 };
 
-fieldsData = reactive({ ...$lander.storage.load('popupform') });
+// fieldsData = reactive({ ...$lander.storage.load('popupform') });
 
 watch(
   fieldsData,
@@ -52,20 +52,20 @@ watch(
   { immediate: true },
 );
 
-const sendForm = () => {
-  if (validFlag) {
-    $lander.storage.save('popupform', fieldsData);
-    $lander
-      .send(
-        fieldsData,
-        {},
-        route.name === 'edu-platform-slug' || route.name === 'edu-platform' ? route.path : undefined,
-      )
-      .then(() => {
-        emit('onSend');
-      });
-  }
-};
+// const sendForm = () => {
+//   if (validFlag) {
+//     $lander.storage.save('popupform', fieldsData);
+//     $lander
+//       .send(
+//         fieldsData,
+//         {},
+//         route.name === 'edu-platform-slug' || route.name === 'edu-platform' ? route.path : undefined,
+//       )
+//       .then(() => {
+//         emit('onSend');
+//       });
+//   }
+// };
 </script>
 
 <style lang="scss">
