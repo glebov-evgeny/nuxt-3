@@ -1,6 +1,7 @@
 <template>
-  <div class="s-layout">
-    <s-header />
+  <div :class="['s-layout', { 'dark-themes': isLightThemes }]">
+    <s-loader />
+    <s-header @handler-change-themes="changeColorThemes" />
     <NuxtPage />
     <s-footer />
   </div>
@@ -10,10 +11,16 @@
 import { useDeviceStore } from '~/store/device';
 
 const store = useDeviceStore();
+
 const handleResize = () => {
   store.updateWidth(window.innerWidth);
 };
 
+const isLightThemes = ref(false);
+const changeColorThemes = () => {
+  console.log('vvv');
+  isLightThemes.value = !isLightThemes.value;
+};
 onMounted(() => {
   handleResize();
 

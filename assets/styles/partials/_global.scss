@@ -4,7 +4,8 @@ body {
 }
 
 body {
-  background-color: var(--color-bg);
+  // background-color: var(--color-bg);
+  background: #eee;
   font-family: 'TT Norms', sans-serif;
   font-size: 16px;
 }
@@ -36,6 +37,7 @@ a {
 .l-wide {
   max-width: var(--layout-width);
   margin: 0 auto;
+  padding: 0 1rem;
   transition: max-width 0.6s ease;
 }
 
