@@ -16,7 +16,7 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "format": "prettier .  --write",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.1",
@@ -55,6 +55,7 @@
     "commitizen": "^4.2.6",
     "cz-customizable": "^7.0.0",
     "dompurify": "^2.4.3",
+    "gh-pages": "^5.0.0",
     "nuxt": "^3.2.0",
     "nuxt-swiper": "^0.1.9",
     "pinia": "^2.0.29",
