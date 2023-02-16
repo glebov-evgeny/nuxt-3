@@ -3,7 +3,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 import eslintPlugin from 'vite-plugin-eslint';
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   debug: true,
   vite: {
     plugins: [eslintPlugin()],
@@ -45,12 +45,15 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
     },
-    baseURL: '/nuxt-3/',
+    // baseURL: '/nuxt-3/',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/main.scss'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui', '~/components/icons'],
+  router: {
+    base: '/nuxt-3/',
+  },
   // runtimeConfig: {
   //   public: {
   //     baseURL: '/nuxt-3/',
