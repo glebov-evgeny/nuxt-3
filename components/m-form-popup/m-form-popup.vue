@@ -10,8 +10,8 @@
 
 <script setup>
 // const { $lander } = useNuxtApp();
-const route = useRoute();
-const emit = defineEmits(['onSend']);
+// const route = useRoute();
+// const emit = defineEmits(['onSend']);
 
 defineProps({
   title: {

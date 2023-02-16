@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   modules: ['nuxt-swiper', '@pinia/nuxt', '@nuxt/image-edge'],
   app: {
     head: {
-      title: 'Title Web',
+      title: 'Glebov Evgeny Frontend Developer',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -39,24 +39,15 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       ],
       link: [
-        { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-        { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png', type: 'image/png' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'shortcut icon', type: 'image/x-icon', href: '/nuxt-3/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/nuxt-3/favicon-16x16.png' },
+        { rel: 'icon', sizes: '32x32', href: '/nuxt-3/favicon-32x32.png', type: 'image/png' },
+        { rel: 'apple-touch-icon', href: '/nuxt-3/apple-touch-icon.png' },
       ],
     },
-    // baseURL: '/nuxt-3/',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/main.scss'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: ['~/components', '~/components/ui', '~/components/icons'],
-  // router: {
-  //   base: '/nuxt-3/',
-  // },
-  // runtimeConfig: {
-  //   public: {
-  //     baseURL: '/nuxt-3/',
-  //   },
-  // },
 });
