@@ -1,188 +1,75 @@
+/* stylelint-disable no-descending-specificity */
+
 .s-footer {
-  padding: var(--a-padding-x8) 0;
-  background-color: var(--color-bg-contrast);
-
-  &__container {
-    padding: 0 var(--a-padding-x4);
-
-    @media all and (min-width: 1430px) {
-      padding: 0;
-    }
+  @include _768 {
+    padding: var(--a-padding-x4) 0;
   }
 
-  &__logo {
-    width: rem(167);
-    margin-bottom: rem(20);
+  padding: var(--a-padding-x4) 0 var(--a-padding-x18);
+  color: #fff;
+  background: #272727;
 
-    @media all and (min-width: 768px) {
-      margin-bottom: rem(24);
-    }
-
-    @media all and (min-width: 1430px) {
-      margin-bottom: 0;
-    }
-  }
-
-  &__top {
+  &__block {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    margin-bottom: rem(16);
-
-    @media all and (min-width: 768px) {
-      flex-flow: row wrap;
-      justify-content: space-between;
-      border-bottom: rem(1) solid var(--color-border);
-    }
-
-    @media all and (min-width: 1430px) {
-      border-bottom: 0;
-    }
   }
 
-  &__menu {
-    margin-bottom: rem(24);
+  &__box {
+    width: 50%;
 
-    @media all and (min-width: 768px) {
-      order: 1;
-      width: 100%;
+    &-content {
+      display: flex;
+      flex-direction: column;
     }
-
-    @media all and (min-width: 1430px) {
-      order: 0;
-      width: auto;
-      margin-left: rem(44);
-    }
-
-    .m-menu {
-      &__item {
-        line-height: rem(40);
-
-        @media all and (min-width: 768px) {
-          line-height: 100%;
-        }
-      }
-
-      &__link {
-        font-size: rem(18);
-
-        @media all and (min-width: 768px) {
-          font-size: rem(16);
-        }
-      }
-    }
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: rem(20);
-
-    @media all and (min-width: 1430px) {
-      margin-left: auto;
-    }
-  }
-
-  &__contacts {
-    margin-bottom: rem(24);
-
-    @media all and (min-width: 768px) {
-      display: none;
-    }
-
-    @media all and (min-width: 1430px) {
-      display: block;
-      margin-bottom: rem(20);
-    }
-
-    &-link {
-      display: block;
-      margin-bottom: rem(8);
-      font-size: rem(14);
-      font-weight: 500;
-      transition: all 0.4s ease;
-
-      @media all and (min-width: 1430px) {
-        display: inline;
-        margin-bottom: 0;
-        margin-left: rem(24);
-        font-size: rem(16);
-      }
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:hover {
-        color: var(--color-link-hover);
-      }
-    }
-  }
-
-  &__socials {
-    display: flex;
-    align-items: center;
-
-    @media all and (min-width: 1430px) {
-      align-self: flex-end;
-    }
-
-    &-title {
-      display: none;
-      color: var(--color-text-tertiary);
-      font-weight: 500;
-
-      @media all and (min-width: 768px) {
-        display: block;
-        margin-right: rem(12);
-        font-size: rem(14);
-      }
-
-      @media all and (min-width: 1430px) {
-        display: block;
-      }
-    }
-
-    &-link {
-      margin-right: rem(12);
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-
-  &__copyright,
-  &__policy {
-    display: block;
-    margin-bottom: rem(16);
-    color: var(--color-text);
-    font-size: rem(14);
-    text-decoration: none;
 
     &:last-child {
-      margin-bottom: 0;
-    }
-
-    @media all and (min-width: 1430px) {
-      display: inline;
-      color: var(--color-text-tertiary);
-    }
-  }
-
-  &__copyright {
-    @media all and (min-width: 1430px) {
-      margin-right: rem(42);
+      @include _768 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
     }
   }
 
-  &__policy {
-    @media all and (min-width: 1430px) {
-      margin-right: rem(18);
+  &__title {
+    @include _1140 {
+      font-size: rem(18);
     }
 
-    &:hover {
-      text-decoration: underline;
+    margin-bottom: rem(16);
+    font-weight: 500;
+  }
+
+  &__link {
+    margin-bottom: rem(8);
+    font-size: rem(14);
+    font-weight: 500;
+  }
+
+  &__social {
+    display: flex;
+
+    &-link {
+      @include _768 {
+        margin: 0 0 0 rem(16);
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(38);
+      height: rem(38);
+      margin-right: rem(16);
     }
+
+    &-image {
+      filter: invert(1);
+    }
+  }
+
+  &__rights {
+    margin-top: rem(32);
+    font-size: rem(12);
   }
 }
+/* stylelint-enable no-descending-specificity */

@@ -4,8 +4,7 @@ body {
 }
 
 body {
-  // background-color: var(--color-bg);
-  background: #eee;
+  background-color: var(--color-bg);
   font-family: 'TT Norms', sans-serif;
   font-size: 16px;
 }
@@ -21,7 +20,7 @@ a {
   --layout-v-padding: 3.75rem; // 60px
 
   @media all and (min-width: 768px) {
-    --layout-width: 44.25rem; // 708px
+    --layout-width: 47.5rem; // 760px
   }
 
   @media all and (min-width: 1140px) {
@@ -79,6 +78,10 @@ a {
 .s-main {
   flex: 1 auto;
   width: 100%;
+  margin-top: 3.125rem; // 50px
+  @media screen and (min-width: 1140px) {
+    margin-top: 5rem; // 80px
+  }
 }
 
 .s-title {
