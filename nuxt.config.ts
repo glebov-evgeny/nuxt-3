@@ -45,6 +45,7 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', href: '/nuxt-3/apple-touch-icon.png' },
       ],
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/main.scss'],

@@ -32,12 +32,25 @@ a {
   }
 }
 
+::-webkit-scrollbar-track {
+  background-color: var(--color-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-second);
+  border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
 .l-default,
 .l-wide {
   max-width: var(--layout-width);
   margin: 0 auto;
   padding: 0 1rem;
-  transition: max-width 0.6s ease;
+  transition: max-width 0.5s ease;
 }
 
 .s-padding {

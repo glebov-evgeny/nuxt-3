@@ -1,6 +1,5 @@
 <template>
   <main class="s-main">
-    <s-dumb />
-    <s-dumb2 />
+    <s-dumb-3 />
   </main>
 </template>
