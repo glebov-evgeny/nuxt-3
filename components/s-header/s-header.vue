@@ -69,11 +69,6 @@ const changeThemes = () => {
 const changeLanguage = (lang) => {
   lang.locale = lang.locale === 'ru' ? 'en' : 'ru';
 };
-
-// const showPopup = ref(false);
-// const showMenu = ref(false);
-// const showApplication = computed(() => store.isTablet || store.isDesktop);
-// const showIcons = computed(() => store.isMobile);
 </script>
 
 <style lang="scss">
