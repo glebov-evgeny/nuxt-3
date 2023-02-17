@@ -4,6 +4,9 @@
       <nuxt-link to="/" class="s-header__logo" aria-label="Перейти на главную">
         <a-icon-logo />
       </nuxt-link>
+      <div class="s-header__nav" :class="[{ active: isOpen && store.isMobile }]">
+        <m-menu />
+      </div>
       <div class="s-header__actions">
         <a href="tel:+79162176557" class="s-header__phone">
           <a-icon-phone />
@@ -30,6 +33,9 @@
             </defs>
           </svg>
         </button>
+        <button class="s-header__lang" @click="changeLanguage($i18n)">
+          <span>{{ $t('header.language') }}</span>
+        </button>
       </div>
       <div v-if="store.isMobile" class="s-header__menu" @click="toggleIsOpenField">
         <svg class="s-header__menu-burger" viewBox="0 0 100 100" width="40" :class="[{ active: isOpen }]">
@@ -52,6 +58,7 @@
 import { useDeviceStore } from '~/store/device';
 const emit = defineEmits(['handler-change-themes']);
 const store = useDeviceStore();
+
 const isOpen = ref(false);
 
 const toggleIsOpenField = () => (isOpen.value = !isOpen.value);
@@ -59,40 +66,10 @@ const changeThemes = () => {
   emit('handler-change-themes');
 };
 
-//
-// const menuItems = ref([
-//   {
-//     name: 'index',
-//     anchor: 'Об Академии',
-//     link: '/',
-//   },
-//   {
-//     name: 'catalog',
-//     anchor: 'Профессии',
-//     link: '/catalog',
-//   },
-//   {
-//     name: 'career',
-//     anchor: 'Центр карьеры',
-//     link: '/career',
-//   },
-//   {
-//     name: 'media',
-//     anchor: 'Медиатека',
-//     link: '#',
-//   },
-//   {
-//     name: 'documents',
-//     anchor: 'Документы Академии',
-//     link: '#',
-//   },
-//   {
-//     name: 'students',
-//     anchor: 'Студентам',
-//     link: '#',
-//   },
-// ]);
-//
+const changeLanguage = (lang) => {
+  lang.locale = lang.locale === 'ru' ? 'en' : 'ru';
+};
+
 // const showPopup = ref(false);
 // const showMenu = ref(false);
 // const showApplication = computed(() => store.isTablet || store.isDesktop);

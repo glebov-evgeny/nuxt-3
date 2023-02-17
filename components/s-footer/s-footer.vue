@@ -1,6 +1,6 @@
 <template>
   <footer class="s-footer">
-    <div class="s-header__container l-wide">
+    <div class="s-footer__container l-wide">
       <p>aeenth</p>
     </div>
   </footer>

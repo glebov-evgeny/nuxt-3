@@ -61,6 +61,7 @@
     "pinia": "^2.0.29",
     "swiper": "^8.4.6",
     "vite-plugin-eslint": "^1.8.1",
+    "vue-i18n": "^9.2.2",
     "vue-router": "^4.1.6"
   },
   "config": {

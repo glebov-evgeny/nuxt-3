@@ -1,7 +1,8 @@
 <template>
   <main class="s-main">
     <div class="l-wide">
-      <p>Ntcn</p>
+      <s-dumb />
+      <s-dumb2 />
     </div>
   </main>
 </template>

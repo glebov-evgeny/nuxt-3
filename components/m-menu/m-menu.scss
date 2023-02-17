@@ -1,50 +1,29 @@
 .m-menu {
-  &__list {
-    display: flex;
-    justify-content: space-between;
+  @include _768 {
+    flex-direction: row;
+    margin-left: rem(25);
+    padding: 0;
+  }
+  @include _1140 {
+    margin-left: rem(64);
   }
 
-  &__item {
-    margin-right: rem(8);
-
-    @media all and (min-width: 1140px) {
-      margin-right: rem(14);
-    }
-
-    @media all and (min-width: 1430px) {
-      margin-right: rem(24);
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
 
   &__link {
-    color: var(--color-link);
+    @include _768 {
+      margin: 0 rem(10) 0 0;
+      padding: 0;
+    }
+    @include _1140 {
+      margin: 0 rem(32) 0 0;
+      font-size: rem(18);
+    }
+
+    margin-bottom: rem(5);
+    padding: rem(5) 0;
     font-weight: 500;
-    transition: all 0.4s ease;
-
-    &:hover {
-      color: var(--color-link-hover);
-    }
-
-    &.active {
-      color: var(--color-link-hover);
-    }
-  }
-
-  &--horizontal & {
-    &__list {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-
-  &--vertical & {
-    &__list {
-      flex-direction: column;
-      align-items: initial;
-    }
   }
 }

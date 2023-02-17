@@ -1,0 +1,99 @@
+{
+  "header": {
+    "nav": [
+      {
+        "title": "About",
+        "name": "about"
+      },
+      {
+        "title": "Work experience",
+        "name": "experience"
+      }
+    ],
+    "language": "RU"
+  },
+  "main": {
+    "text": {
+      "subtitle": "Hey, I’m",
+      "title": "Инглишь мазафака",
+      "description": "I have been doing frontend development since 2019. I live and work in Moscow.<br> For several years of training and work in the field of web development, I managed to gain a multifaceted experience in more than 3 companies.<br><br> On this site you can find more information about me, my projects, as well as the technology stack that I work with."
+    },
+    "buttons": {
+      "github": {
+        "name": "Github",
+        "link": "https://github.com/MotokoKusa/"
+      },
+      "linkedIn": {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/%D1%80%D0%BE%D0%BC%D0%B0%D0%BD-%D0%B1%D0%B5%D0%BB%D0%BE%D0%B2-758976201/"
+      },
+      "mail": {
+        "name": "Send an email",
+        "link": ""
+      },
+      "telegram": {
+        "name": "Telegram",
+        "link": ""
+      }
+    }
+  },
+  "about": {
+    "title": "I'll tell you a little about myself:",
+    "description": [
+      "I work as a Frontend developer. In my free time, I improve in web development.",
+      "In the field of Frontend development began to develop in 2019. I was engaged in self-study, and also took courses at different sites (Stepik, Skillbox, Youtube).",
+      "In 2021, he started working as an HTML coder. I was engaged in layout of landing pages according to layouts, made all sorts of edits to existing projects. In parallel, I studied JavaScript, Vue to move into the field of web development",
+      "In 2022, he was certified and moved to the position of Frontend developer",
+      "In the second half of 2022, I moved to work as a Frontend developer at KСK TECHNOLOGIES, where I currently work.",
+      "The stack I use:",
+      "Vue 2/3, Vue-router, Axios, Vuex, Nuxt, SCSS",
+      "The goal is to master in 2023:",
+      "Vue 3 composition api, Pinia, TypeScript, Nuxt 3"
+    ]
+  },
+  "resume": {
+    "title": "Work experience",
+    "experience": [
+      {
+        "name": "Frontend-developer",
+        "date": "september 2022 – present",
+        "company": {
+          "name": "KCK TECHNOLOGIES",
+          "link": "https://www.kck.ru/"
+        },
+        "duties": []
+      },
+      {
+        "name": "Frontend-developer",
+        "date": "may 2022 - july 2022",
+        "company": {
+          "name": "SYNERGY Corporation",
+          "link": "https://synergy.ru/"
+        },
+
+        "duties": [
+          "Creating components",
+          "Support for existing projects",
+          "Writing javascript scripts",
+          "Interaction with backend developers"
+        ]
+      },
+      {
+        "name": "HTML coder",
+        "date": "september 2021 - May 2022",
+        "company": {
+          "name": "SYNERGY Corporation",
+          "link": "https://synergy.ru/"
+        },
+        "duties": [
+          "Layout of landing pages by layouts",
+          "Support for existing projects",
+          "Writing simple javascript scripts"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "text": "Contacts"
+  }
+}
