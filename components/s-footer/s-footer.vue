@@ -6,7 +6,7 @@
           <p class="s-footer__title">Контакты:</p>
           <div class="s-footer__box-content">
             <a href="tel:+79162176557" class="s-footer__link">
-              <span>8 (916) 217-65-57</span>
+              <span>+7 916 217 65 57</span>
             </a>
             <a href="mailto:egoji@mail.ru" class="s-footer__link">
               <span>egoji@mail.ru</span>

@@ -10,7 +10,7 @@
       <div class="s-header__actions">
         <a href="tel:+79162176557" class="s-header__phone">
           <a-icon-phone />
-          <span class="s-header__phone-number" aria-label="Позвоните нам: +7 495 280 08 27">+7 495 280 08 27</span>
+          <span class="s-header__phone-number" aria-label="Позвоните нам: +7 916 217 65 57">+7 916 217 65 57</span>
         </a>
         <button class="s-header__theme" type="button" @click="changeThemes">
           <svg
