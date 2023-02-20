@@ -6,13 +6,15 @@
   --color-grey: #eee;
   --color-yellow: #ffc846;
   --color-yellow-light: #ffdf3a;
+  --color-blue-light: #2775b9;
   .dark-themes {
     --color-main: #272727;
     --color-second: #fff;
-    --color-body: #f7f9fd;
+    --color-body: #555555;
     --color-grey: #4d4d4d;
     --color-yellow: #272727;
     --color-yellow-light: #575547;
+    --color-blue-light: #6cace4;
     .s-header__logo-image,
     .s-header__phone-image {
       filter: invert(1);

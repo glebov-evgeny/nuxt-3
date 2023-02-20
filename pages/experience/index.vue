@@ -1,5 +1,5 @@
 <template>
   <main class="s-main">
-    <s-dumb-4 />
+    <s-experience />
   </main>
 </template>

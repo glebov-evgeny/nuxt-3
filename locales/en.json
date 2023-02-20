@@ -37,59 +37,88 @@
       }
     }
   },
-  "about": {
-    "title": "I'll tell you a little about myself:",
-    "description": [
-      "I work as a Frontend developer. In my free time, I improve in web development.",
-      "In the field of Frontend development began to develop in 2019. I was engaged in self-study, and also took courses at different sites (Stepik, Skillbox, Youtube).",
-      "In 2021, he started working as an HTML coder. I was engaged in layout of landing pages according to layouts, made all sorts of edits to existing projects. In parallel, I studied JavaScript, Vue to move into the field of web development",
-      "In 2022, he was certified and moved to the position of Frontend developer",
-      "In the second half of 2022, I moved to work as a Frontend developer at KСK TECHNOLOGIES, where I currently work.",
-      "The stack I use:",
-      "Vue 2/3, Vue-router, Axios, Vuex, Nuxt, SCSS",
-      "The goal is to master in 2023:",
-      "Vue 3 composition api, Pinia, TypeScript, Nuxt 3"
-    ]
-  },
-  "resume": {
+  "experience": {
     "title": "Work experience",
-    "experience": [
+    "stack": "Stack:",
+    "responsibilities": "Responsibilities:",
+    "example": "Site examples:",
+    "info": [
       {
         "name": "Frontend-developer",
-        "date": "september 2022 – present",
-        "company": {
-          "name": "KCK TECHNOLOGIES",
-          "link": "https://www.kck.ru/"
-        },
-        "duties": []
-      },
-      {
-        "name": "Frontend-developer",
-        "date": "may 2022 - july 2022",
+        "date": "September 2022 г. – present time",
         "company": {
           "name": "SYNERGY Corporation",
           "link": "https://synergy.ru/"
+        },
+        "duties": ["Creating components", "Support for existing projects"],
+        "links": [
+          {
+            "item": "https://synergystart.ru/",
+            "image": "synergystart"
+          }
+        ],
+        "stack": ["Vue 2/3", "Vuex/Pina", "Nuxt 2/3", "Options API/Composition API"]
+      },
+      {
+        "name": "Frontend-developer",
+        "date": "May 2022 г. - September 2022 г.",
+        "company": {
+          "name": "Cheil Russia",
+          "link": "http://www.cheil.com/ru"
         },
 
         "duties": [
-          "Creating components",
-          "Support for existing projects",
-          "Writing javascript scripts",
-          "Interaction with backend developers"
-        ]
+          "Layout and development of the logic of product pages of the site",
+          "Coding configurators",
+          "Queries, display, interaction with data",
+          "Life cycle maintenance and optimization of developed solutions"
+        ],
+        "links": [
+          {
+            "item": "https://www.samsung.com/ru/offer/samsung-care-plus/",
+            "image": "careplus"
+          }
+        ],
+        "stack": ["Vue", "React"]
       },
       {
-        "name": "HTML coder",
-        "date": "september 2021 - May 2022",
+        "name": "HTML-coder",
+        "date": "January 2019 г. - May 2022 г.",
         "company": {
           "name": "SYNERGY Corporation",
           "link": "https://synergy.ru/"
         },
         "duties": [
-          "Layout of landing pages by layouts",
+          "Landing page layout based on layouts",
+          "Integration with Bitrix, modX",
           "Support for existing projects",
-          "Writing simple javascript scripts"
-        ]
+          "Setting up optimization, analytics, mechanics of interaction with the server"
+        ],
+        "links": [
+          {
+            "item": "https://www.samsung.com/ru/offer/samsung-care-plus/",
+            "image": "careplus"
+          }
+        ],
+        "stack": ["Gulp", "Nunjucks", "PHP", "JS"]
+      },
+      {
+        "name": "HTML-coder",
+        "date": "June 2018 г. - October 2018 г.",
+        "company": {
+          "name": "CC 'Green Line'",
+          "link": "https://www.inspiro.ru/"
+        },
+        "duties": [
+          "Layout of new and refactoring of existing pages",
+          "Implementation and configuration of analytics systems",
+          "Micropage layout",
+          "Site speed optimization",
+          "Working with Template Toolkit",
+          "Working with the version control system Git",
+          "Maiking of e-mail"
+        ],
+        "stack": ["HTML/CSS", "JavaScript/jQuery"]
       }
     ]
   },

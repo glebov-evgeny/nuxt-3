@@ -7,6 +7,7 @@ body {
   background-color: var(--color-body);
   font-family: 'TT Norms', sans-serif;
   font-size: 16px;
+  font-variant: no-common-ligatures;
 }
 
 a {
@@ -92,85 +93,8 @@ a {
   flex: 1 auto;
   width: 100%;
   margin-top: 3.125rem; // 50px
+  background-color: var(--color-body);
   @media screen and (min-width: 1140px) {
     margin-top: 5rem; // 80px
-  }
-}
-
-.s-title {
-  font-size: rem(34);
-  font-weight: 500;
-  line-height: rem(36);
-
-  @media screen and (min-width: 768px) {
-    font-size: rem(34);
-    font-weight: 500;
-    line-height: rem(36);
-  }
-
-  @media screen and (min-width: 1140px) {
-    font-size: rem(48);
-    font-weight: 500;
-    line-height: rem(52);
-  }
-
-  &-h1 {
-    font-size: rem(32);
-    font-weight: 500;
-    line-height: rem(40);
-
-    @media screen and (min-width: 768px) {
-      font-size: rem(40);
-    }
-    @media screen and (min-width: 1140px) {
-      font-size: rem(58);
-      line-height: rem(58);
-    }
-  }
-}
-
-.s-border {
-  @media screen and (min-width: 768px) {
-    border-radius: var(--border-radius-x3);
-  }
-}
-
-.lander-message {
-  position: fixed;
-  z-index: 9000;
-  top: 0;
-  right: 0;
-  width: auto;
-  padding: var(--a-padding-x6);
-  color: var(--color-text-contrast);
-  background: var(--color-bg-tertiary);
-
-  &-item {
-    margin-bottom: var(--a-padding-x1);
-
-    strong {
-      width: 50%;
-    }
-
-    span {
-      margin-left: var(--a-padding-x3);
-    }
-  }
-
-  &-close {
-    position: absolute;
-    top: var(--a-padding-x1);
-    right: var(--a-padding-x4);
-    cursor: pointer;
-
-    &::after {
-      content: '\2715';
-    }
-  }
-
-  @media screen and (min-width: 1140px) {
-    font-size: rem(48);
-    font-weight: 500;
-    line-height: rem(52);
   }
 }
