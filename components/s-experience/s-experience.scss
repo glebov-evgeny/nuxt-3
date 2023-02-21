@@ -7,13 +7,64 @@
   }
 
   &__item {
+    @include _768 {
+      padding: var(--a-padding-x8) var(--a-padding-x10);
+    }
+    @include _1140 {
+      padding: var(--a-padding-x15) var(--a-padding-x20);
+    }
+
+    position: relative;
     margin-bottom: rem(8);
     padding: var(--a-padding-x6) var(--a-padding-x4);
     color: var(--color-second);
     background: var(--color-main);
     border-radius: var(--border-radius-x1);
 
+    &::before {
+      content: '';
+      position: absolute;
+      right: 5%;
+      width: rem(100);
+      height: rem(100);
+      background: url('@/assets/images/experience/triangle.svg') center center no-repeat;
+      background-size: contain;
+      animation: small-rotate 8s ease infinite;
+      filter: hue-rotate(325deg);
+      @keyframes small-rotate {
+        0% {
+          top: 20%;
+          transform: rotate(-10deg);
+        }
+
+        50% {
+          top: 24%;
+          transform: rotate(15deg);
+        }
+
+        100% {
+          top: 20%;
+          transform: rotate(-10deg);
+        }
+      }
+    }
+
     &-top {
+      @include _768 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(32);
+      }
+
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    &-content {
+      @include _768 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(32);
+      }
+
       display: grid;
       grid-template-columns: 1fr;
     }
@@ -24,13 +75,25 @@
     }
 
     &-title {
+      @include _768 {
+        margin: 0;
+      }
+      @include _1140 {
+        font-size: rem(24);
+      }
+
       margin-bottom: rem(8);
       font-size: rem(20);
       font-weight: 500;
     }
 
     &-subtitle {
-      margin-bottom: rem(4);
+      @include _1140 {
+        margin-bottom: rem(10);
+        font-size: rem(20);
+      }
+
+      margin-bottom: rem(6);
       font-size: rem(17);
       font-weight: 500;
     }
@@ -40,6 +103,10 @@
     }
 
     &-date {
+      @include _768 {
+        text-align: right;
+      }
+
       font-size: rem(16);
     }
 
@@ -52,11 +119,22 @@
     }
 
     &-point {
+      @include _768 {
+        padding-left: rem(24);
+      }
+      @include _1140 {
+        font-size: rem(18);
+      }
+
       position: relative;
       margin-bottom: rem(4);
       padding-left: rem(16);
 
       &::before {
+        @include _1140 {
+          top: rem(8);
+        }
+
         content: '';
         position: absolute;
         top: rem(6);
@@ -65,6 +143,37 @@
         height: rem(6);
         background: var(--color-second);
         transform: rotate(45deg);
+      }
+    }
+
+    &-examples {
+      @include _768 {
+        text-align: right;
+      }
+
+      &-block {
+        @include _768 {
+          flex-direction: row-reverse;
+          max-width: rem(220);
+          margin-left: auto;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &-link {
+        @include _768 {
+          margin: 0 0 rem(8) rem(8);
+        }
+
+        display: flex;
+        width: rem(45);
+        height: rem(45);
+        margin: 0 rem(8) rem(8) 0;
+        background-size: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
       }
     }
   }

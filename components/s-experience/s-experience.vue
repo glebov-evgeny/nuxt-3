@@ -11,51 +11,57 @@
           <a :href="$rt(item.company.link)" target="_blank" class="s-experience__item-company">
             {{ $rt(item.company.name) }}
           </a>
-          <div class="s-experience__item-middle">
+          <div class="s-experience__item-content">
+            <div class="s-experience__item-middle">
+              <div
+                v-if="$tm(`experience.info[${key}].duties`).length"
+                class="s-experience__item-duties s-experience__item-margin"
+              >
+                <p class="s-experience__item-subtitle">
+                  {{ $t('experience.responsibilities') }}
+                </p>
+                <ul class="s-experience__item-list">
+                  <li
+                    v-for="(elem, index) in $tm(`experience.info[${key}].duties`)"
+                    :key="index"
+                    class="s-experience__item-point"
+                  >
+                    {{ $rt(elem) }}
+                  </li>
+                </ul>
+              </div>
+              <div
+                v-if="$tm(`experience.info[${key}].stack`).length"
+                class="s-experience__item-stack s-experience__item-margin"
+              >
+                <p class="s-experience__item-subtitle">{{ $t('experience.stack') }}</p>
+                <ul class="s-experience__item-list">
+                  <li
+                    v-for="(elem, index) in $tm(`experience.info[${key}].stack`)"
+                    :key="index"
+                    class="s-experience__item-point"
+                  >
+                    {{ $rt(elem) }}
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div
-              v-if="$tm(`experience.info[${key}].duties`)"
-              class="s-experience__item-duties s-experience__item-margin"
+              v-if="$tm(`experience.info[${key}].links`).length"
+              class="s-experience__item-examples s-experience__item-margin"
             >
-              <p class="s-experience__item-subtitle">
-                {{ $t('experience.responsibilities') }}
-              </p>
-              <ul class="s-experience__item-list">
-                <li
-                  v-for="(elem, index) in $tm(`experience.info[${key}].duties`)"
+              <p class="s-experience__item-subtitle">{{ $t('experience.example') }}</p>
+              <div class="s-experience__item-examples-block">
+                <a
+                  v-for="(elem, index) in $tm(`experience.info[${key}].links`)"
                   :key="index"
-                  class="s-experience__item-point"
-                >
-                  {{ $rt(elem) }}
-                </li>
-              </ul>
+                  :href="$rt(elem.item)"
+                  target="_blank"
+                  class="s-experience__item-examples-link"
+                  :style="{ backgroundImage: `url(/images/portfolio/${elem.image}.png)` }"
+                ></a>
+              </div>
             </div>
-            <div v-if="$tm(`experience.info[${key}].stack`)" class="s-experience__item-stack s-experience__item-margin">
-              <p class="s-experience__item-subtitle">{{ $t('experience.stack') }}</p>
-              <ul class="s-experience__item-list">
-                <li
-                  v-for="(elem, index) in $tm(`experience.info[${key}].stack`)"
-                  :key="index"
-                  class="s-experience__item-point"
-                >
-                  {{ $rt(elem) }}
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            v-if="$tm(`experience.info[${key}].links`)"
-            class="s-experience__item-examples s-experience__item-margin"
-          >
-            <p class="s-experience__item-subtitle">{{ $t('experience.example') }}</p>
-            <a
-              v-for="(elem, index) in $tm(`experience.info[${key}].links`)"
-              :key="index"
-              :href="$rt(elem.item)"
-              target="_blank"
-              class="s-experience__item-examples-link"
-            >
-              {{ $rt(elem.image) }}
-            </a>
           </div>
         </div>
       </div>

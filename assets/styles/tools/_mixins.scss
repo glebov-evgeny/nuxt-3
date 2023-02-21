@@ -11,6 +11,12 @@
   }
 }
 
+@mixin _1440 {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
 @mixin _1140 {
   @media screen and (min-width: 1140px) {
     @content;

@@ -101,6 +101,14 @@
           {
             "item": "https://synergy.ru/lp/openday/management/",
             "image": "management"
+          },
+          {
+            "item": "https://programiss.ru/",
+            "image": "programiss"
+          },
+          {
+            "item": "https://synergyglobal.ru/forums/brain2023/",
+            "image": "brain"
           }
         ],
         "stack": ["Gulp", "Nunjucks", "PHP", "JS"]
