@@ -83,8 +83,24 @@
         ],
         "links": [
           {
-            "item": "https://www.samsung.com/ru/offer/samsung-care-plus/",
-            "image": "careplus"
+            "item": "https://synergy.ru/lp/design/",
+            "image": "design"
+          },
+          {
+            "item": "https://synergyproduction.ru/",
+            "image": "production"
+          },
+          {
+            "item": "https://akademia-triz.ru/lp/webinar/",
+            "image": "webinar"
+          },
+          {
+            "item": "https://synergydigital.com/lp/marketplaces/",
+            "image": "marketplaces"
+          },
+          {
+            "item": "https://synergy.ru/lp/openday/management/",
+            "image": "management"
           }
         ],
         "stack": ["Gulp", "Nunjucks", "PHP", "JS"]
