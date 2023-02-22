@@ -13,7 +13,9 @@
     "language": "RU"
   },
   "intro": {
-    "title": "..."
+    "subtitle": "Hey, I’m",
+    "title": "Glebov Evgeny",
+    "description": "I have been doing frontend development since 2018. I live and work in Moscow. For several years of training and work in the field of web development, I managed to gain a multifaceted experience in more than 3 companies. On this site you can find more information about me, my projects, as well as the technology stack that I work with."
   },
   "about": {
     "title": "Page About"

@@ -2,7 +2,7 @@
   <header class="s-header">
     <div class="s-header__container l-wide">
       <nuxt-link to="/" class="s-header__logo" aria-label="Перейти на главную">
-        <a-icon-logo />
+        <a-icon-logo @click="closeMenu" />
       </nuxt-link>
       <div class="s-header__nav" :class="[{ active: isOpen && store.isMobile }]" @click="closeMenu">
         <m-menu />

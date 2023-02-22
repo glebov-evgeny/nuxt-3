@@ -15,7 +15,7 @@
   min-height: rem(50);
   padding: rem(5) 0;
   color: var(--color-second);
-  background: var(--color-main);
+  background: var(--color-grey-light);
   transition: 0.3s;
 
   &__container {
@@ -51,7 +51,7 @@
     width: 100%;
     height: 0;
     color: var(--color-second);
-    background: var(--color-main);
+    background: var(--color-grey-light);
     transition: 0.3s;
 
     &.active {

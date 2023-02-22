@@ -1,8 +1,12 @@
 <template>
   <section class="s-intro">
-    <div class="s-intro__container l-wide">
+    <div class="s-intro__container">
       <div class="s-intro__block">
-        <h2 class="s-intro__title s-title">{{ $t('intro.title') }}</h2>
+        <div class="s-intro__content">
+          <p class="s-intro__subtitle">{{ $t('intro.subtitle') }}</p>
+          <h2 class="s-intro__title s-title">{{ $t('intro.title') }}</h2>
+          <p class="s-intro__text">{{ $t('intro.description') }}</p>
+        </div>
       </div>
     </div>
   </section>

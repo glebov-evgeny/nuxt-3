@@ -1,10 +1,39 @@
 .s-intro {
-  margin: var(--a-padding-x12) 0;
+  @include _768 {
+    width: 50%;
+  }
+  @include _1140 {
+    width: calc(100% - rem(330));
+  }
 
-  // background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+  margin-top: var(--a-padding-x12);
+  color: var(--color-second);
+
   &__block {
     padding: var(--a-padding-x6);
     background: var(--color-main);
     border-radius: var(--border-radius-x2);
+  }
+
+  &__subtitle {
+    @include _1140 {
+      font-size: rem(18);
+    }
+
+    margin-bottom: rem(8);
+    font-size: rem(16);
+  }
+
+  &__title {
+    margin-bottom: rem(8);
+  }
+
+  &__text {
+    @include _1140 {
+      font-size: rem(18);
+    }
+
+    font-size: rem(16);
+    text-align: justify;
   }
 }

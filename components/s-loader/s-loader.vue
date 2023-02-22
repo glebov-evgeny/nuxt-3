@@ -1,10 +1,8 @@
 <template>
   <div v-if="loading" class="preloader">
-    <div class="lds-ellipsis">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
     </div>
   </div>
 </template>
