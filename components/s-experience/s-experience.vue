@@ -58,7 +58,7 @@
                   :href="$rt(elem.item)"
                   target="_blank"
                   class="s-experience__item-examples-link"
-                  :style="{ backgroundImage: `url(/images/portfolio/${elem.image}.png)` }"
+                  :style="{ backgroundImage: `url(/nuxt-3/images/portfolio/${elem.image}.png)` }"
                 ></a>
               </div>
             </div>
