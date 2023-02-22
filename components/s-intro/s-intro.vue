@@ -1,11 +1,11 @@
 <template>
-  <div class="l-wide">
-    <section class="s-intro">
-      <div class="s-intro__container l-wide">
-        <h2>Страница intro</h2>
+  <section class="s-intro">
+    <div class="s-intro__container l-wide">
+      <div class="s-intro__block">
+        <h2 class="s-intro__title s-title">{{ $t('intro.title') }}</h2>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script setup></script>

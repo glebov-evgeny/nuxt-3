@@ -4,7 +4,7 @@
       <nuxt-link to="/" class="s-header__logo" aria-label="Перейти на главную">
         <a-icon-logo />
       </nuxt-link>
-      <div class="s-header__nav" :class="[{ active: isOpen && store.isMobile }]">
+      <div class="s-header__nav" :class="[{ active: isOpen && store.isMobile }]" @click="closeMenu">
         <m-menu />
       </div>
       <div class="s-header__actions">
@@ -64,6 +64,10 @@ const isOpen = ref(false);
 const toggleIsOpenField = () => (isOpen.value = !isOpen.value);
 const changeThemes = () => {
   emit('handler-change-themes');
+};
+
+const closeMenu = () => {
+  isOpen.value = false;
 };
 
 const changeLanguage = (lang) => {

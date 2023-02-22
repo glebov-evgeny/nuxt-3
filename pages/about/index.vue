@@ -1,5 +1,5 @@
 <template>
   <main class="s-main">
-    <s-dumb-3 />
+    <s-about />
   </main>
 </template>

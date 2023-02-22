@@ -3,7 +3,7 @@
     <div class="s-footer__container l-wide">
       <div class="s-footer__block">
         <div class="s-footer__box">
-          <p class="s-footer__title">Контакты:</p>
+          <p class="s-footer__title">{{ $t('footer.contacts') }}</p>
           <div class="s-footer__box-content">
             <a href="tel:+79162176557" class="s-footer__link">
               <span>+7 916 217 65 57</span>
@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="s-footer__box">
-          <p class="s-footer__title">Полезные ссылки:</p>
+          <p class="s-footer__title">{{ $t('footer.useful') }}</p>
           <div class="s-footer__social">
             <a href="https://t.me/eaglebov" class="s-footer__social-link" target="_blank">
               <img class="s-footer__social-image" src="/images/icons/social/tg.svg" alt="social-link" />
@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-      <p class="s-footer__rights">{{ getYear }} © Разработка, продвижение, etc.</p>
+      <p class="s-footer__rights">{{ getYear }} © {{ $t('footer.rights') }}</p>
     </div>
   </footer>
 </template>
