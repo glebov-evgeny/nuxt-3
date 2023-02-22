@@ -19,6 +19,9 @@
             <a href="https://t.me/eaglebov" class="s-footer__social-link" target="_blank">
               <img class="s-footer__social-image" src="/images/icons/social/tg.svg" alt="social-link" />
             </a>
+            <a href="https://t.me/eaglebov" class="s-footer__social-link" target="_blank">
+              <img class="s-footer__social-image" src="/images/icons/social/tg.svg" alt="social-link" />
+            </a>
             <a href="https://wa.me/79162176557" class="s-footer__social-link" target="_blank">
               <img class="s-footer__social-image" src="/images/icons/social/wa.svg" alt="social-link" />
             </a>
