@@ -1,5 +1,5 @@
 <template>
-  <img src="/images/icons/home.png" class="s-header__logo-image" alt="github-icon" />
+  <img src="/images/icons/logo.png" class="s-header__logo-image" alt="github-icon" />
 </template>
 
 <script>
