@@ -1,0 +1,10 @@
+.s-swiper {
+  color: var(--color-second);
+  grid-area: swiper;
+
+  &__block {
+    padding: var(--a-padding-x6);
+    background: var(--color-main);
+    border-radius: var(--border-radius-x2);
+  }
+}

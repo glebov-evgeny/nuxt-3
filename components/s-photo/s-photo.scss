@@ -1,15 +1,6 @@
 .s-photo {
-  @include _768 {
-    width: 50%;
-    margin-top: var(--a-padding-x12);
-    margin-left: rem(16);
-  }
-  @include _1140 {
-    width: rem(330);
-  }
-
-  margin-top: var(--a-padding-x3);
   color: var(--color-second);
+  grid-area: photo;
 
   &__block {
     padding: var(--a-padding-x6);
@@ -24,8 +15,8 @@
     }
 
     display: block;
-    width: rem(240);
-    height: rem(240);
+    width: rem(238);
+    height: rem(238);
     margin: 0 auto;
     background: var(--color-body);
     border-radius: 50%;

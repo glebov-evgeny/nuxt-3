@@ -1,13 +1,6 @@
 .s-intro {
-  @include _768 {
-    width: 50%;
-  }
-  @include _1140 {
-    width: calc(100% - rem(330));
-  }
-
-  margin-top: var(--a-padding-x12);
   color: var(--color-second);
+  grid-area: intro;
 
   &__block {
     padding: var(--a-padding-x6);
