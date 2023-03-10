@@ -20,6 +20,9 @@
   "about": {
     "title": "Page About"
   },
+  "swiper": {
+    "title": "Work examples"
+  },
   "experience": {
     "title": "Work experience",
     "stack": "Stack:",

@@ -12,6 +12,7 @@
     @include _768 {
       height: 100%;
       background: var(--color-main);
+      border-radius: var(--border-radius-x2);
     }
   }
 

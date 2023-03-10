@@ -20,6 +20,9 @@
   "about": {
     "title": "Страница About"
   },
+  "swiper": {
+    "title": "Примеры работ"
+  },
   "experience": {
     "title": "Опыт работы",
     "responsibilities": "Обязанности:",

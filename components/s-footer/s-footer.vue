@@ -16,8 +16,8 @@
         <div class="s-footer__box">
           <p class="s-footer__title">{{ $t('footer.useful') }}</p>
           <div class="s-footer__social">
-            <a href="https://t.me/eaglebov" class="s-footer__social-link" target="_blank">
-              <img class="s-footer__social-image" src="/images/icons/social/tg.svg" alt="social-link" />
+            <a href="https://github.com/glebov-evgeny?tab=repositories" class="s-footer__social-link" target="_blank">
+              <img class="s-footer__social-image" src="/images/icons/social/gh.svg" alt="social-link" />
             </a>
             <a href="https://t.me/eaglebov" class="s-footer__social-link" target="_blank">
               <img class="s-footer__social-image" src="/images/icons/social/tg.svg" alt="social-link" />
