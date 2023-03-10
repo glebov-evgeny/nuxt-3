@@ -1,8 +1,10 @@
 .s-title {
   color: var(--color-second);
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: rem(24);
-  font-weight: 500;
+  font-weight: 900;
   line-height: 130%;
+  text-transform: uppercase;
   @media screen and (min-width: 1140px) {
     font-size: rem(28);
   }
