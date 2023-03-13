@@ -8,9 +8,12 @@
   --color-yellow: #ffc846;
   --color-yellow-light: #ffdf3a;
   --color-blue-light: #2775b9;
-  --color-base-white: #f9fdff;
+  --color-base-white: #eceff6;
   --color-brilliant: #3cc8ec;
   --color-pink: #eb4294;
+  --color-swiper-active: #eb4294;
+  --color-swiper: #3cc8ec;
+  --color-white: #fff;
   .dark-themes {
     --color-main: #272727;
     --color-second: #fff;
@@ -21,8 +24,11 @@
     --color-yellow-light: #575547;
     --color-blue-light: #6cace4;
     --color-base-white: #272727;
-    --color-brilliant: #3cc8ec;
-    --color-pink: #eb4294;
+    --color-brilliant: #272727;
+    --color-pink: #272727;
+    --color-swiper-active: #eb4294;
+    --color-swiper: #3cc8ec;
+    --color-white: #fff;
     .s-header__logo-image,
     .s-header__phone-image {
       filter: invert(1);

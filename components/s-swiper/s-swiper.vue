@@ -37,17 +37,13 @@
 <script setup>
 import { Pagination, Navigation } from 'swiper';
 
-const presentations = [
-  { label: 'start', link: 'https://synergystart.ru/' },
-  { label: 'care', link: 'https://www.samsung.com/ru/support/samsung-care-plus/' },
-  { label: 'design', link: 'https://synergy.ru/lp/design/' },
-  { label: 'synergyproduction', link: 'https://synergyproduction.ru/' },
-  { label: 'webinar', link: 'https://akademia-triz.ru/lp/webinar/' },
-  { label: 'marketplaces', link: 'https://synergydigital.com/lp/marketplaces/' },
-  { label: 'management', link: 'https://synergy.ru/lp/openday/management/' },
-  { label: 'programiss', link: 'https://programiss.ru/' },
-  { label: 'brain', link: 'https://synergyglobal.ru/forums/brain2023/' },
-];
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const props = defineProps({
+  presentations: {
+    type: Array,
+    required: true,
+  },
+});
 
 const sliderPrev = ref(null);
 const sliderNext = ref(null);
