@@ -55,10 +55,39 @@
     transition: 0.3s;
 
     &.active {
-      height: rem(100);
+      height: rem(155);
       padding-top: rem(20);
       border-radius: 0 0 var(--border-radius-x3) var(--border-radius-x3);
     }
+  }
+
+  &__login {
+    @include _768 {
+      width: rem(100);
+      min-height: rem(35);
+      margin: 0 0 0 rem(5);
+    }
+    @include _1140 {
+      width: rem(125);
+      min-height: rem(40);
+      margin: 0 0 0 rem(20);
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: calc(100% - rem(32));
+    min-height: rem(40);
+    margin: rem(8) auto 0;
+    color: var(--color-main);
+    background: var(--color-second);
+    border: none;
+    border-radius: var(--border-radius-x1);
+    outline: none;
+    font-size: rem(16);
+    font-weight: 500;
+    cursor: pointer;
   }
 
   &__actions {

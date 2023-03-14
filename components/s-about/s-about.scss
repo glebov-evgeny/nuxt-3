@@ -6,4 +6,8 @@
     background: var(--color-main);
     border-radius: var(--border-radius-x2);
   }
+
+  &__description {
+    margin-top: rem(24);
+  }
 }

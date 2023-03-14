@@ -6,6 +6,7 @@
       </nuxt-link>
       <div class="s-header__nav" :class="[{ active: isOpen && store.isMobile }]" @click="closeMenu">
         <m-menu />
+        <button v-if="store.isMobile" class="s-header__login" @click="loginPopup">{{ $t('header.login') }}</button>
       </div>
       <div class="s-header__actions">
         <a href="tel:+79162176557" class="s-header__phone">
@@ -36,6 +37,7 @@
         <button class="s-header__lang" @click="changeLanguage($i18n)">
           <span>{{ $t('header.language') }}</span>
         </button>
+        <button v-if="!store.isMobile" class="s-header__login" @click="loginPopup">{{ $t('header.login') }}</button>
       </div>
       <div v-if="store.isMobile" class="s-header__menu" @click="toggleIsOpenField">
         <svg class="s-header__menu-burger" viewBox="0 0 100 100" width="40" :class="[{ active: isOpen }]">
@@ -51,6 +53,9 @@
         </svg>
       </div>
     </div>
+    <a-popup :visible="showPopup" class="s-header__popup" @close="showPopup = false">
+      <p>zzzzzzzzzzz</p>
+    </a-popup>
   </header>
 </template>
 
@@ -59,6 +64,7 @@ import { useDeviceStore } from '~/store/device';
 const emit = defineEmits(['handler-change-themes']);
 const store = useDeviceStore();
 
+const showPopup = ref(false);
 const isOpen = ref(false);
 
 const toggleIsOpenField = () => (isOpen.value = !isOpen.value);
@@ -68,6 +74,10 @@ const changeThemes = () => {
 
 const closeMenu = () => {
   isOpen.value = false;
+};
+
+const loginPopup = () => {
+  showPopup.value = true;
 };
 
 const changeLanguage = (lang) => {

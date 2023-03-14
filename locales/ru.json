@@ -10,7 +10,8 @@
         "name": "experience"
       }
     ],
-    "language": "EN"
+    "language": "EN",
+    "login": "Вход"
   },
   "intro": {
     "subtitle": "Привет, меня зовут",

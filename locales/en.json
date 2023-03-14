@@ -10,7 +10,8 @@
         "name": "experience"
       }
     ],
-    "language": "RU"
+    "language": "RU",
+    "login": "Login"
   },
   "intro": {
     "subtitle": "Hey, I’m",
