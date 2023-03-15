@@ -9,7 +9,6 @@
 
 <script setup>
 import { useDeviceStore } from '~/store/device';
-
 const store = useDeviceStore();
 
 const handleResize = () => {

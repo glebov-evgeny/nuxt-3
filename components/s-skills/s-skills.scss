@@ -1,13 +1,16 @@
-.s-about {
+.s-skills {
   margin: var(--a-padding-x12) 0;
 
   &__block {
+    margin-top: rem(24);
     padding: var(--a-padding-x6);
     background: var(--color-main);
     border-radius: var(--border-radius-x2);
   }
 
   &__description {
-    margin-top: rem(24);
+    @include _1140 {
+      font-size: rem(18);
+    }
   }
 }

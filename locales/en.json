@@ -2,8 +2,8 @@
   "header": {
     "nav": [
       {
-        "title": "About",
-        "name": "about"
+        "title": "Skills",
+        "name": "skills"
       },
       {
         "title": "Work experience",
@@ -18,9 +18,48 @@
     "title": "Glebov Evgeny",
     "description": "I have been doing frontend development since 2018. I live and work in Moscow. For several years of training and work in the field of web development, I managed to gain a multifaceted experience in more than 3 companies. On this site you can find more information about me, my projects, as well as the technology stack that I work with."
   },
-  "about": {
-    "title": "Glebov Evgeny",
-    "description": "I have been doing frontend development since 2018. I live and work in Moscow. For several years of training and work in the field of web development, I managed to gain a multifaceted experience in more than 3 companies. On this site you can find more information about me, my projects, as well as the technology stack that I work with."
+  "skills": {
+    "title": "Skills",
+    "description": "text",
+    "item": [
+      {
+        "title": "HTML",
+        "grade": 100,
+        "points": [
+          "HTML 5",
+          "Адаптив",
+          "Кроссбраузерность",
+          "Семантика",
+          "BEM",
+          "JSX",
+          "Jade/pug",
+          "Оптимизация",
+          "Типографирование",
+          "SEO",
+          "Emmet"
+        ],
+        "info": "Fast and Furious"
+      },
+      {
+        "title": "CSS",
+        "grade": 70,
+        "points": [
+          "CSS",
+          "LESS",
+          "SCSS/SASS",
+          "Mobile First",
+          "CSS-анимация",
+          "Flexible",
+          "Grids",
+          "Маски",
+          "Pixel Perfect",
+          "SVG",
+          "Использование rem'ов",
+          "Emmet"
+        ],
+        "info": "Fast and Furious 2"
+      }
+    ]
   },
   "swiper": {
     "title": "Work examples"
