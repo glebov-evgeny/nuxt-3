@@ -27,7 +27,44 @@
         "grade": 100,
         "points": [
           "HTML 5",
-          "Адаптив",
+          "Adaptive",
+          "Кроссбраузерность",
+          "Семантика",
+          "BEM",
+          "JSX",
+          "Jade/pug",
+          "Оптимизация",
+          "Типографирование",
+          "SEO",
+          "Emmet"
+        ],
+        "info": "Fast and Furious"
+      },
+      {
+        "title": "CSS",
+        "grade": 70,
+        "points": [
+          "CSS",
+          "LESS",
+          "SCSS/SASS",
+          "Mobile First",
+          "CSS-анимация",
+          "Flexible",
+          "Grids",
+          "Маски",
+          "Pixel Perfect",
+          "SVG",
+          "Использование rem'ов",
+          "Emmet"
+        ],
+        "info": "Fast and Furious 2"
+      },
+      {
+        "title": "HTML",
+        "grade": 100,
+        "points": [
+          "HTML 5",
+          "Adaptive",
           "Кроссбраузерность",
           "Семантика",
           "BEM",

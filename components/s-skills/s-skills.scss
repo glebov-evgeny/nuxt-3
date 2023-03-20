@@ -1,3 +1,4 @@
+/* stylelint-disable */
 .s-skills {
   margin: var(--a-padding-x12) 0;
 
@@ -6,6 +7,14 @@
     padding: var(--a-padding-x6);
     background: var(--color-main);
     border-radius: var(--border-radius-x2);
+    @include _1140 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(16);
+      background: transparent;
+      border-radius: inherit;
+      padding: 0;
+    }
   }
 
   &__description {
@@ -13,4 +22,81 @@
       font-size: rem(18);
     }
   }
+  &__item {
+    color: var(--color-second);
+    @include _1140 {
+      background: var(--color-main);
+      border-radius: var(--border-radius-x2);
+      padding: var(--a-padding-x6);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(36);
+      @include _1140 {
+        margin: 0;
+      }
+    }
+    &-title {
+      font-size: rem(18);
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: rem(16);
+    }
+    &-grade {
+      position: relative;
+      width: 100%;
+      height: rem(18);
+      border-radius: var(--border-radius-x1);
+      background: var(--color-body);
+      margin-bottom: rem(16);
+      &-line {
+        position: absolute;
+        height: rem(18);
+        border-radius: var(--border-radius-x1);
+        position: absolute;
+        left: rem(0);
+        top: rem(0);
+        z-index: 1;
+        &._color-1 {
+          background: #e44d26;
+        }
+        &._color-2 {
+          background: #379ad6;
+        }
+        &._color-3 {
+          background: #f7e01d;
+        }
+        &._color-4 {
+          background: #e91e63;
+        }
+        &._color-5 {
+          background: #e91e63;
+        }
+      }
+      &-number {
+        position: absolute;
+        top: rem(1);
+        left: rem(1);
+        z-index: 3;
+        font-size: rem(14);
+        font-weight: 600;
+        text-align: right;
+        color: var(--color-white);
+        padding-right: rem(8);
+      }
+    }
+    &-points {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: rem(16);
+    }
+    &-point {
+      background: var(--color-grey);
+      font-size: rem(14);
+      font-weight: 600;
+      border-radius: var(--border-radius-x1);
+      padding: rem(6) rem(10);
+      margin: 0 rem(4) rem(4) 0;
+    }
+  }
 }
+/* stylelint-enable */
