@@ -74,7 +74,6 @@ async function registerUser() {
     try {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { user } = await createUserWithEmailAndPassword(nuxtApp.$auth, fieldsData.email, fieldsData.password);
-      console.log(user);
       emit('onSend');
       router.push({ path: '/skills' });
       currentUser.setUser(user.email, user.uid);
@@ -85,7 +84,7 @@ async function registerUser() {
       if (error.message === 'Firebase: Error (auth/email-already-in-use).') {
         fbError.value = 'Пользователь уже зарегистрирован.';
       } else {
-        console.error(`Ошибка: ${error.message}`);
+        // console.error(`Ошибка: ${error.message}`);
       }
     }
   }

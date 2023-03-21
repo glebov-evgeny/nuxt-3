@@ -85,7 +85,7 @@ async function loginUser() {
       if (error.message === 'Firebase: Error (auth/email-already-in-use).') {
         fbError.value = 'Пользователь уже зарегистрирован.';
       } else {
-        console.error(`Ошибка: ${error.message}`);
+        // console.error(`Ошибка: ${error.message}`);
       }
     }
   }
