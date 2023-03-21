@@ -10,6 +10,7 @@
         {{ $t('form.confirm') }}
       </a-control>
     </div>
+    <p v-if="error" class="m-form__error">- {{ error }} -</p>
   </div>
 </template>
 
@@ -17,6 +18,10 @@
 const emit = defineEmits(['onSubmit']);
 const props = defineProps({
   title: {
+    type: String,
+    default: '',
+  },
+  error: {
     type: String,
     default: '',
   },

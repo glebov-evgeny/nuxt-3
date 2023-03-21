@@ -11,7 +11,8 @@
       }
     ],
     "language": "RU",
-    "login": "Login"
+    "login": "Login",
+    "logout": "Logout"
   },
   "form": {
     "login": "Login",
@@ -19,7 +20,8 @@
     "name": "Name",
     "email": "Email",
     "password": "Password",
-    "confirm": "I confirm to the processing of data and agree to the privacy policy"
+    "confirm": "I confirm to the processing of data and agree to the privacy policy",
+    "or": "or"
   },
   "intro": {
     "subtitle": "Hey, I’m",

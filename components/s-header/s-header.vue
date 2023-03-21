@@ -6,7 +6,12 @@
       </nuxt-link>
       <div class="s-header__nav" :class="[{ active: isOpen && store.isMobile }]" @click="closeMenu">
         <m-menu />
-        <button v-if="store.isMobile" class="s-header__login" @click="loginPopup">{{ $t('header.login') }}</button>
+        <button v-if="store.isMobile && !currentUser.uid" class="s-header__login" @click="loginPopup">
+          {{ $t('header.login') }}
+        </button>
+        <button v-else-if="store.isMobile && currentUser.uid" class="s-header__login" @click="loginClean">
+          {{ $t('header.logout') }}
+        </button>
       </div>
       <div class="s-header__actions">
         <a href="tel:+79162176557" class="s-header__phone">
@@ -37,7 +42,12 @@
         <button class="s-header__lang" @click="changeLanguage($i18n)">
           <span>{{ $t('header.language') }}</span>
         </button>
-        <button v-if="!store.isMobile" class="s-header__login" @click="loginPopup">{{ $t('header.login') }}</button>
+        <button v-if="!store.isMobile && !currentUser.uid" class="s-header__login" @click="loginPopup">
+          {{ $t('header.login') }}
+        </button>
+        <button v-else-if="!store.isMobile && currentUser.uid" class="s-header__login" @click="loginClean">
+          {{ $t('header.logout') }}
+        </button>
       </div>
       <div v-if="store.isMobile" class="s-header__menu" @click="toggleIsOpenField">
         <svg class="s-header__menu-burger" viewBox="0 0 100 100" width="40" :class="[{ active: isOpen }]">
@@ -61,8 +71,13 @@
 
 <script setup>
 import { useDeviceStore } from '~/store/device';
+import { useUserStore } from '~/store/user';
+const currentUser = useUserStore();
+
 const emit = defineEmits(['handler-change-themes']);
 const store = useDeviceStore();
+const router = useRouter();
+const userInformation = useCookie('userInformation');
 
 const showPopup = ref(false);
 const isOpen = ref(false);
@@ -80,9 +95,26 @@ const loginPopup = () => {
   showPopup.value = true;
 };
 
+const loginClean = () => {
+  /* удаление информации о пользователе из стора и кук, редирект на главную страницу */
+  currentUser.$reset();
+  userInformation.value = null;
+  router.push({ path: '/' });
+};
+
 const changeLanguage = (lang) => {
   lang.locale = lang.locale === 'ru' ? 'en' : 'ru';
 };
+
+const getInformationFromCookie = () => {
+  if (userInformation.value) {
+    currentUser.setUser(userInformation.value.email, userInformation.value.id);
+  }
+};
+
+onMounted(() => {
+  getInformationFromCookie();
+});
 </script>
 
 <style lang="scss">
