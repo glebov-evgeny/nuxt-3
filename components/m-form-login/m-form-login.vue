@@ -13,6 +13,7 @@
 </template>
 
 <script setup>
+const emit = defineEmits(['onSend']);
 let fieldsData = reactive({
   email: '',
   password: '',
@@ -41,7 +42,9 @@ watch(
 
 const sendForm = () => {
   if (validFlag) {
-    console.log('форма отправлена');
+    console.log('correct');
+    emit('onSend');
+    router.push({ path: '/skills' });
   }
 };
 </script>

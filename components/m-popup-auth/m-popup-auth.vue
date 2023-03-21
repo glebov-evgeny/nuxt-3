@@ -1,8 +1,8 @@
 <template>
-  <m-form-login v-if="currenForm === 'reg'" />
-  <m-form-registration v-else />
+  <m-form-login v-if="currenForm === 'login'" @on-send="onSend" />
+  <m-form-registration v-else @on-send="onSend" />
 </template>
 
 <script setup>
-let currenForm = ref('reg');
+let currenForm = ref('registration');
 </script>

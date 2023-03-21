@@ -3,11 +3,9 @@
     :title="$t('form.registration')"
     :button-text="$t('form.registration')"
     :submit-disabled="!validFlag"
-    @on-submit="sendForm"
+    @on-submit="registerUser"
   >
     <template #inputs>
-      <p>{{ $t('form.email') }}</p>
-      <a-input id="popup-form-name" v-model="fieldsData.name" :placeholder="$t('form.name')" />
       <a-input id="popup-form-email" v-model="fieldsData.email" :placeholder="$t('form.email')" />
       <a-input id="popup-form-password" v-model="fieldsData.password" :placeholder="$t('form.password')" />
     </template>
@@ -15,23 +13,26 @@
 </template>
 
 <script setup>
-// let title = ref('true');
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+const emit = defineEmits(['onSend']);
+const nuxtApp = useNuxtApp();
+const router = useRouter();
 
 let fieldsData = reactive({
-  name: '',
   email: '',
   password: '',
 });
+
 let errors = reactive({
-  name: true,
   email: true,
   password: true,
 });
+
 let validFlag = ref(false);
 const checkedValidateError = () => {
-  errors.name = /^([A-Z][-,a-z,0-9']+[ ]*)+$/i.test(fieldsData.name);
+  errors.email = /^([A-Z][-,a-z,0-9']+[ ]*)+$/i.test(fieldsData.name);
   errors.password = /^([A-Z][-,a-z,0-9']+[ ]*)+$/i.test(fieldsData.password);
-  return errors.name && errors.password;
+  return errors.email;
 };
 watch(
   fieldsData,
@@ -40,9 +41,26 @@ watch(
   },
   { immediate: true },
 );
-const sendForm = () => {
+
+async function registerUser() {
   if (validFlag) {
-    console.log('форма отправлена');
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { user } = await createUserWithEmailAndPassword(nuxtApp.$auth, fieldsData.email, fieldsData.password);
+      console.log('correct');
+      emit('onSend');
+      router.push({ path: '/skills' });
+    } catch (error) {
+      if (error) {
+        console.log(error);
+      }
+    }
   }
-};
+}
+
+// const sendForm = () => {
+//   if (validFlag) {
+//     console.log('форма отправлена');
+//   }
+// };
 </script>
