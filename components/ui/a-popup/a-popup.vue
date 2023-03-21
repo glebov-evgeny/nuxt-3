@@ -2,7 +2,12 @@
   <div v-if="visible" class="a-popup" :class="classes">
     <div class="a-popup__backdrop" @click="closePopup" @keydown.esc="closePopup" />
     <div class="a-popup__container" :style="`max-width: ${width}`">
-      <div class="a-popup__close" @click="closePopup" @keydown.esc="closePopup" />
+      <div class="a-popup__close" @click="closePopup" @keydown.esc="closePopup">
+        <svg viewBox="0 0 32 32" class="a-popup__close-img">
+          <line class="cls-1" x1="7" x2="25" y1="7" y2="25" />
+          <line class="cls-1" x1="7" x2="25" y1="25" y2="7" />
+        </svg>
+      </div>
       <div v-if="type !== 'iframe'" class="a-popup__content">
         <slot />
       </div>

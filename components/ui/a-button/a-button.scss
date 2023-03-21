@@ -1,9 +1,14 @@
 .a-button {
-  width: auto;
-  border-width: rem(1);
-  border-style: solid;
-  border-radius: var(--border-radius-x2);
-  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: rem(40);
+  background: var(--color-swiper);
+  border: none;
+  border-radius: var(--border-radius-x1);
+  outline: none;
+  text-align: center;
   transition: all 0.4s ease;
 
   &:hover {
@@ -11,130 +16,14 @@
   }
 
   &__label {
-    font-size: inherit;
-  }
-
-  &--small {
-    height: rem(38);
-    padding: 0 var(--a-padding-x4);
+    color: var(--color-main);
     font-size: rem(14);
-  }
-
-  &--medium {
-    height: rem(42);
-    padding: 0 var(--a-padding-x6);
-  }
-
-  &--large {
-    height: rem(50);
-    padding: 0 var(--a-padding-x6);
-    font-size: rem(18);
-  }
-
-  &--xlarge {
-    height: rem(54);
-    font-size: rem(18);
-  }
-
-  &--icon {
-    width: rem(36);
-    height: rem(36);
-    padding: 0;
-    background-color: transparent;
-    border-color: transparent;
-
-    &:hover {
-      background-color: transparent;
-      border-color: transparent;
-    }
-  }
-
-  &--block {
-    display: block;
-    width: 100%;
-  }
-
-  &--primary {
-    color: var(--color-button-text-primary);
-    background-color: var(--color-button-bg-primary);
-    border-color: var(--color-button-border-primary);
-
-    &:hover {
-      color: var(--color-button-text-primary-hover);
-      background-color: var(--color-button-bg-primary-hover);
-      border-color: var(--color-button-border-primary-hover);
-    }
-  }
-
-  &--secondary {
-    color: var(--color-button-text-secondary);
-    background-color: var(--color-button-bg-secondary);
-    border-color: var(--color-button-border-secondary);
-
-    &:hover {
-      color: var(--color-button-text-secondary-hover);
-      background-color: var(--color-button-bg-secondary-hover);
-      border-color: var(--color-button-border-secondary-hover);
-    }
-  }
-
-  &--tertiary {
-    color: var(--color-button-text-tertiary);
-    background-color: var(--color-button-bg-tertiary);
-    border-color: var(--color-button-border-tertiary);
-
-    &:hover {
-      color: var(--color-button-text-tertiary-hover);
-      background-color: var(--color-button-bg-tertiary-hover);
-      border-color: var(--color-button-border-tertiary-hover);
-    }
-  }
-
-  &--outline {
-    color: var(--color-button-text-outline);
-    background-color: var(--color-button-bg-outline);
-    border-color: var(--color-button-border-outline);
-
-    &:hover {
-      color: var(--color-button-text-outline-hover);
-      background-color: var(--color-button-bg-outline-hover);
-      border-color: var(--color-button-border-outline-hover);
-    }
-  }
-
-  &--outline-secondary {
-    color: var(--color-button-text-outline-secondary);
-    background-color: var(--color-button-bg-outline-secondary);
-    border-color: var(--color-button-border-outline-secondary);
-
-    &:hover {
-      color: var(--color-button-text-outline-secondary-hover);
-      background-color: var(--color-button-bg-outline-secondary-hover);
-      border-color: var(--color-button-border-outline-secondary-hover);
-    }
-  }
-
-  &--outline-grey {
-    color: var(--color-button-text-outline-grey);
-    background-color: var(--color-button-bg-outline-grey);
-    border-color: var(--color-button-border-outline-grey);
-
-    &:hover {
-      color: var(--color-button-text-outline-grey-hover);
-      background-color: var(--color-button-bg-outline-grey-hover);
-      border-color: var(--color-button-border-outline-grey-hover);
-    }
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
   &--disabled {
-    background-color: var(--color-button-bg-disabled);
-    border-color: var(--color-button-border-disabled);
+    background: var(--color-grey);
     pointer-events: none;
-
-    &:hover {
-      color: var(--color-button-text-outline-hover);
-      background-color: var(--color-button-bg-disabled);
-      border-color: var(--color-button-border-disabled);
-    }
   }
 }

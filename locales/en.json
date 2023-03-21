@@ -13,6 +13,14 @@
     "language": "RU",
     "login": "Login"
   },
+  "form": {
+    "login": "Login",
+    "registration": "Registration",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirm": "I confirm to the processing of data and agree to the privacy policy"
+  },
   "intro": {
     "subtitle": "Hey, I’m",
     "title": "Glebov Evgeny",
@@ -28,17 +36,15 @@
         "points": [
           "HTML 5",
           "Adaptive",
-          "Кроссбраузерность",
-          "Семантика",
+          "Cross-browser",
+          "Semantics",
           "BEM",
           "JSX",
-          "Jade/pug",
-          "Оптимизация",
-          "Типографирование",
-          "SEO",
-          "Emmet"
+          "Optimization",
+          "Typographics",
+          "SEO"
         ],
-        "info": "Fast and Furious"
+        "info": "Layout quickly and efficiently. From the very beginning, I lay the foundation for scaling the project. Used component approach to web development. Used semantic elements to ensure the availability and ranking of sites in search engines."
       },
       {
         "title": "CSS",
@@ -48,53 +54,34 @@
           "LESS",
           "SCSS/SASS",
           "Mobile First",
-          "CSS-анимация",
+          "CSS-animation",
           "Flexible",
           "Grids",
-          "Маски",
+          "Masks",
           "Pixel Perfect",
           "SVG",
-          "Использование rem'ов",
-          "Emmet"
+          "REMs"
         ],
-        "info": "Fast and Furious 2"
+        "info": "I prefer mobile-first. Due to preprocessors, the code writing time and its readability are significantly reduced. I use modern features of CSS. I like to create various animations, both in styles and using more labor-intensive technologies such as Three.js, GSAP. I freely use flex and grid. I carefully monitor the adaptability of the elements, checking and rechecking the product on various resolutions and browsers. In case of doubts about the admissibility of properties and their support, I will definitely check on caniuse.com"
       },
       {
-        "title": "HTML",
-        "grade": 100,
+        "title": "JavaScript",
+        "grade": 90,
         "points": [
-          "HTML 5",
-          "Adaptive",
-          "Кроссбраузерность",
-          "Семантика",
-          "BEM",
-          "JSX",
-          "Jade/pug",
-          "Оптимизация",
-          "Типографирование",
-          "SEO",
-          "Emmet"
+          "JavaScript",
+          "Ajax",
+          "Plugins",
+          "Animation",
+          "Events",
+          "Closure",
+          "DOM / virtual DOM",
+          "Regular expressions",
+          "Cookies",
+          "API",
+          "Webpack",
+          "Gulp"
         ],
-        "info": "Fast and Furious"
-      },
-      {
-        "title": "CSS",
-        "grade": 70,
-        "points": [
-          "CSS",
-          "LESS",
-          "SCSS/SASS",
-          "Mobile First",
-          "CSS-анимация",
-          "Flexible",
-          "Grids",
-          "Маски",
-          "Pixel Perfect",
-          "SVG",
-          "Использование rem'ов",
-          "Emmet"
-        ],
-        "info": "Fast and Furious 2"
+        "info": "I think that a modern website is unthinkable without JS. I write and optimize code in native JS, comment as much as possible for myself and others, isolate and remove logic in modules if there is an intended and potential possibility of reuse for this. The composition of the API and the specific mechanisms of frameworks are actively used, depending on the project and the tasks set. Often practice on codewars.com"
       }
     ]
   },

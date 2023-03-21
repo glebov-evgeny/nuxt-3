@@ -1,16 +1,15 @@
 .m-form {
   &__title {
-    margin-bottom: rem(24);
-    font-size: rem(34);
-    font-weight: 500;
-    line-height: rem(36);
+    width: calc(100% - rem(32));
+    margin-bottom: rem(16);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: rem(24);
+    font-weight: 900;
+    line-height: 130%;
+    text-transform: uppercase;
   }
 
   &__inputs {
     margin-bottom: rem(16);
-
-    &--horizontal {
-      display: flex;
-    }
   }
 }

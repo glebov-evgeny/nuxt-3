@@ -8,19 +8,33 @@
   }
 
   &__trigger {
+    position: relative;
     width: rem(16);
     height: rem(16);
-    background-color: var(--color-control-bg);
-    border-width: rem(1);
-    border-style: solid;
-    border-color: var(--color-control-border);
-    border-radius: var(--border-radius-x1);
+    background-color: var(--color-grey);
     cursor: pointer;
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(10);
+      height: rem(10);
+      background: var(--color-swiper-active);
+      transition: 0.2s;
+      transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+    }
+
     &--checked {
-      background-image: url('/images/icons/checked.svg');
-      background-repeat: no-repeat;
-      background-position: center center;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: var(--color-swiper-active);
+        transform: translate(-50%, -50%) scale(1) rotate(0);
+      }
     }
   }
 

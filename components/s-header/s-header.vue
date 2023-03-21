@@ -54,7 +54,7 @@
       </div>
     </div>
     <a-popup :visible="showPopup" class="s-header__popup" @close="showPopup = false">
-      <p>zzzzzzzzzzz</p>
+      <m-popup-auth />
     </a-popup>
   </header>
 </template>

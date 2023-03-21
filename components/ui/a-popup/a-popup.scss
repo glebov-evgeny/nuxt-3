@@ -1,3 +1,4 @@
+/* stylelint-disable */
 .a-popup {
   position: fixed;
   z-index: 1001;
@@ -40,49 +41,52 @@
     height: auto;
     max-height: 100%;
     margin: auto;
-    padding: var(--a-padding-x8) var(--a-padding-x4);
-    background-color: var(--color-bg-contrast);
+    padding: var(--a-padding-x6) var(--a-padding-x4) var(--a-padding-x6) var(--a-padding-x6);
+    background-color: var(--color-main);
+    border-radius: var(--border-radius-x2);
     flex-shrink: 0;
     flex-grow: 0;
-
-    @media all and (min-width: 768px) {
-      padding: var(--a-padding-x12) var(--a-padding-x8);
-      border-radius: var(--border-radius-x3);
+    .m-form {
+      max-width: rem(290);
+    }
+    .a-input {
+      margin-bottom: rem(8);
     }
   }
 
   &__close {
+    z-index: 1;
     position: absolute;
-    top: rem(16);
-    right: rem(16);
-    width: rem(34);
-    height: rem(34);
-    padding: var(--a-padding-x2);
-    background-color: var(--color-bg);
+    top: calc(var(--a-padding-x6) + rem(2));
+    right: var(--a-padding-x6);
+    width: rem(26);
+    height: rem(26);
     border-radius: var(--border-radius-x1);
     cursor: pointer;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: rem(18);
-      height: rem(18);
-      background-image: url('/images/icons/close.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-swiper-active);
+    &-img {
+      transition: 0.2s;
+      max-width: rem(14);
+      line {
+        stroke: var(--color-white);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: rem(3);
+      }
     }
-
     &:hover {
-      &::before {
-        transform: scale(0.8);
+      .a-popup__close-img {
+        transform: rotate(-90deg);
       }
     }
   }
 
   &__content {
     overflow-y: auto;
-
+    padding-right: rem(8);
     h1,
     h2,
     h3,
@@ -101,3 +105,4 @@
     }
   }
 }
+/* stylelint-enable */

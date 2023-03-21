@@ -1,11 +1,7 @@
 .m-form-popup {
-  max-width: rem(648);
+  max-width: rem(290);
 
   &__input {
-    margin-bottom: rem(16);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: rem(8);
   }
 }

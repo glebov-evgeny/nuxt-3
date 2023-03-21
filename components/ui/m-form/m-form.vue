@@ -3,21 +3,11 @@
     <div v-if="title" class="m-form__title">{{ title }}</div>
     <div class="m-form__inputs" :class="classes">
       <slot name="inputs" />
-      <a-button
-        class="m-form__button"
-        :label="buttonText"
-        :disabled="isSubmitDisabled"
-        :width="buttonOptions.width"
-        :block="buttonOptions.block"
-        :type="buttonOptions.type"
-        :size="buttonOptions.size"
-        @click="submitForm"
-      />
+      <a-button class="m-form__button" :label="buttonText" :disabled="isSubmitDisabled" @click="submitForm" />
     </div>
     <div class="m-form__checkbox">
       <a-control v-model="personalData" :text-type="formOptions.type">
-        Я даю согласие на обработку персональных данных, согласен на получение информационных рассылок от Университета
-        «Синергия» и соглашаюсь c политикой конфиденциальности
+        {{ $t('form.confirm') }}
       </a-control>
     </div>
   </div>
@@ -48,17 +38,6 @@ const props = defineProps({
     default() {
       return {
         type: 'primary',
-      };
-    },
-  },
-  buttonOptions: {
-    type: Object,
-    required: false,
-    default() {
-      return {
-        type: 'primary',
-        block: true,
-        size: 'large',
       };
     },
   },

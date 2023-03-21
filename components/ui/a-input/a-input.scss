@@ -3,25 +3,15 @@
 
   &__textfield {
     width: 100%;
+    min-height: rem(40);
+    padding: 0 rem(16);
     border: 0;
     border-width: rem(1);
     border-style: solid;
     border-color: var(--color-input-border);
-    border-radius: var(--border-radius-x2);
+    border-radius: var(--border-radius-x1);
     outline: none;
     font-size: rem(14);
-
-    &--medium {
-      padding: var(--a-padding-x3) var(--a-padding-x4);
-    }
-
-    &--large {
-      padding: var(--a-padding-x4) var(--a-padding-x4);
-    }
-
-    &--search {
-      padding: var(--a-padding-x4) var(--a-padding-x13) var(--a-padding-x4) var(--a-padding-x4);
-    }
   }
 
   &--search {
