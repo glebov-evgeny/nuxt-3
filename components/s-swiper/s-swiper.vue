@@ -5,7 +5,7 @@
         <h2 class="s-swiper__title s-title">{{ $t('swiper.title') }}</h2>
         <swiper class="s-swiper__slider" v-bind="swiperConfig">
           <swiper-slide v-for="(item, index) in presentations" :key="index" class="s-swiper__item">
-            <img :src="`/images/swiper/${item.label}.png`" class="s-swiper__item-img" />
+            <img :src="`/nuxt-3/images/swiper/${item.label}.png`" class="s-swiper__item-img" />
             <a :href="`${item.link}`" target="_blank" class="s-swiper__item-link">
               <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="27.5816" y1="16.0606" x2="13.4395" y2="1.91844" stroke="black" stroke-width="4" />
