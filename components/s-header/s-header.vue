@@ -112,6 +112,22 @@ const getInformationFromCookie = () => {
   }
 };
 
+watch(
+  () => {
+    const htmlWrapper = document.querySelector('html');
+    const bodyWrapper = document.querySelector('body');
+    if (showPopup.value === true) {
+      // bodyOverflow();
+      htmlWrapper.style.overflowY = 'hidden';
+      bodyWrapper.style.overflowY = 'hidden';
+    } else {
+      htmlWrapper.style.overflowY = 'initial';
+      bodyWrapper.style.overflowY = 'initial';
+    }
+  },
+  { immediate: true },
+);
+
 onMounted(() => {
   getInformationFromCookie();
 });

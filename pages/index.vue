@@ -1,6 +1,6 @@
 <template>
   <main class="s-main">
-    <div class="column l-wide" style="opacity: 100%">
+    <div class="column l-wide">
       <s-intro />
       <s-photo />
       <s-swiper :presentations="presentations" />

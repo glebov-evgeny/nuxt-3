@@ -4,6 +4,7 @@ body {
 }
 
 body {
+  overflow-x: hidden !important;
   background-color: var(--color-body);
   font-family: 'TT Norms', sans-serif;
   font-size: 16px;

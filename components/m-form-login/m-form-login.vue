@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="section-form">
     <m-form
       :title="$t('form.login')"
       :button-text="$t('form.login')"
@@ -76,14 +76,19 @@ async function loginUser() {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { user } = await signInWithEmailAndPassword(nuxtApp.$auth, fieldsData.email, fieldsData.password);
       emit('onSend');
-      router.push({ path: '/skills' });
+      router.push({ path: '/information' });
       currentUser.setUser(user.email, user.uid);
       /* устанавливаю куки с почтой и id пользователя на 7 дней */
       const cookieDataUser = { email: user.email, id: user.uid, maxAge: 60 * 60 * 24 * 7 };
       userInformation.value = cookieDataUser;
     } catch (error) {
+      console.log(error.message);
       if (error.message === 'Firebase: Error (auth/email-already-in-use).') {
         fbError.value = 'Пользователь уже зарегистрирован.';
+      } else if (error.message === 'Firebase: Error (auth/wrong-password).') {
+        fbError.value = 'Неверно указан пароль.';
+      } else if (error.message === 'Firebase: Error (auth/user-not-found).') {
+        fbError.value = 'Пользователь не найден.';
       } else {
         // console.error(`Ошибка: ${error.message}`);
       }

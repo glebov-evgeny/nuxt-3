@@ -2,7 +2,9 @@
   <div :class="['s-layout', { 'dark-themes': isLightThemes }]">
     <s-loader />
     <s-header @handler-change-themes="changeColorThemes" />
-    <NuxtPage />
+    <main class="s-main" style="opacity: 100%">
+      <s-error />
+    </main>
     <s-footer />
   </div>
 </template>
@@ -29,24 +31,13 @@ onMounted(() => {
 </script>
 
 <style>
-.page-enter-active {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.5s ease-in-out;
-}
+.page-enter-active,
 .page-leave-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s;
 }
-
-.page-enter-to {
-  opacity: 1;
-  transform: translateX(0);
-}
-
+.page-enter-from,
 .page-leave-to {
   opacity: 0;
-  transform: translateX(-100%);
+  filter: blur(1rem);
 }
 </style>

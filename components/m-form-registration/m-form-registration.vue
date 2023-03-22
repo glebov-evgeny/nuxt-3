@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="section-form">
     <m-form
       :title="$t('form.registration')"
       :button-text="$t('form.registration')"
@@ -75,10 +75,10 @@ async function registerUser() {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { user } = await createUserWithEmailAndPassword(nuxtApp.$auth, fieldsData.email, fieldsData.password);
       emit('onSend');
-      router.push({ path: '/skills' });
+      router.push({ path: '/information' });
       currentUser.setUser(user.email, user.uid);
       /* устанавливаю куки с почтой и id пользователя на 7 дней */
-      const cookieDataUser = { email: user.email, id: user.uid, maxAge: 60 * 60 * 24 * 7 };
+      const cookieDataUser = { email: user.email, id: user.uid, maxAge: 60 * 60 * 24 * 7, SameSite: Lax };
       userInformation.value = cookieDataUser;
     } catch (error) {
       if (error.message === 'Firebase: Error (auth/email-already-in-use).') {

@@ -8,6 +8,10 @@
       {
         "title": "Work experience",
         "name": "experience"
+      },
+      {
+        "title": "Information",
+        "name": "information"
       }
     ],
     "language": "RU",
@@ -20,13 +24,36 @@
     "name": "Name",
     "email": "Email",
     "password": "Password",
-    "confirm": "I confirm to the processing of data and agree to the privacy policy",
+    "confirm": "I confirm to the sending, processing and storage of data",
+    "confirm2": "I confirm to the processing of data and agree to the privacy policy",
     "or": "or"
   },
   "intro": {
     "subtitle": "Hey, I’m",
     "title": "Glebov Evgeny",
     "description": "I have been doing frontend development since 2018. I live and work in Moscow. For several years of training and work in the field of web development, I managed to gain a multifaceted experience in more than 3 companies. On this site you can find more information about me, my projects, as well as the technology stack that I work with."
+  },
+  "information": {
+    "title": "Information",
+    "description": "This page was created to protect protected routes and the logic of the personal account/admin panel.",
+    "more": "Show more",
+    "cards": [
+      {
+        "title": "Protected Route",
+        "description": "<span>Only</span> for authorized users",
+        "route": "presentation"
+      },
+      {
+        "title": "Personal Area",
+        "description": "authorized / unauthorized user",
+        "route": "account"
+      },
+      {
+        "title": "Admin Panel",
+        "description": "User with admin rights",
+        "route": "admin"
+      }
+    ]
   },
   "skills": {
     "title": "Skills",
@@ -198,6 +225,13 @@
         "stack": ["HTML/CSS", "JavaScript/jQuery"]
       }
     ]
+  },
+  "presentation": {
+    "title": "Protected Route",
+    "description": "This page can only be accessed by registered users. <br/>If you want to go to it without authorization, a redirect occurs."
+  },
+  "error": {
+    "title": "404 page"
   },
   "footer": {
     "contacts": "Contacts:",

@@ -1,5 +1,5 @@
 <template>
-  <main class="s-main" style="opacity: 100%">
+  <main class="s-main">
     <s-experience />
   </main>
 </template>
