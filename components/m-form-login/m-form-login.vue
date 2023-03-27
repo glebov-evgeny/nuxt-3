@@ -75,14 +75,18 @@ async function loginUser() {
     try {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { user } = await signInWithEmailAndPassword(nuxtApp.$auth, fieldsData.email, fieldsData.password);
+      if (router.currentRoute.value.name === 'authorization') {
+        router.push({ path: '/presentation' });
+      } else {
+        router.push({ path: '/information' });
+      }
       emit('onSend');
-      router.push({ path: '/information' });
       currentUser.setUser(user.email, user.uid);
       /* устанавливаю куки с почтой и id пользователя на 7 дней */
       const cookieDataUser = { email: user.email, id: user.uid, maxAge: 60 * 60 * 24 * 7 };
       userInformation.value = cookieDataUser;
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       if (error.message === 'Firebase: Error (auth/email-already-in-use).') {
         fbError.value = 'Пользователь уже зарегистрирован.';
       } else if (error.message === 'Firebase: Error (auth/wrong-password).') {

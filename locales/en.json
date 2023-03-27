@@ -233,6 +233,13 @@
   "error": {
     "title": "404 page"
   },
+  "work": {
+    "title": "Page on work"
+  },
+  "userpage": {
+    "title": "Personal Information"
+  },
+  "btnBack": "Go back",
   "footer": {
     "contacts": "Contacts:",
     "useful": "Useful links:",

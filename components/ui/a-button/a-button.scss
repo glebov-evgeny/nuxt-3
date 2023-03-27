@@ -22,6 +22,10 @@
     text-transform: uppercase;
   }
 
+  &--accent {
+    background: var(--color-swiper-active);
+  }
+
   &--disabled {
     background: var(--color-grey);
     pointer-events: none;

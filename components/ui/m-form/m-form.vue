@@ -3,7 +3,13 @@
     <div v-if="title" class="m-form__title">{{ title }}</div>
     <div class="m-form__inputs" :class="classes">
       <slot name="inputs" />
-      <a-button class="m-form__button" :label="buttonText" :disabled="isSubmitDisabled" @click="submitForm" />
+      <a-button
+        class="m-form__button"
+        :type="formOptions.type"
+        :label="buttonText"
+        :disabled="isSubmitDisabled"
+        @click="submitForm"
+      />
     </div>
     <div class="m-form__checkbox">
       <a-control v-model="personalData" :text-type="formOptions.type">
@@ -42,7 +48,7 @@ const props = defineProps({
     required: false,
     default() {
       return {
-        type: 'primary',
+        type: 'accent',
       };
     },
   },

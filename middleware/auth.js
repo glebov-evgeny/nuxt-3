@@ -1,6 +1,8 @@
 import { useUserStore } from '~/store/user';
 
-export default defineNuxtRouteMiddleware(({ currentUser = useUserStore() }) => {
+// eslint-disable-next-line no-shadow
+export default defineNuxtRouteMiddleware(() => {
+  const currentUser = useUserStore();
   if (!currentUser.uid) {
     return navigateTo('/authorization');
   }
