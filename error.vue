@@ -31,13 +31,46 @@ onMounted(() => {
 </script>
 
 <style>
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.4s;
+.page-enter-active {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: all 0.5s ease-in-out;
 }
-.page-enter-from,
+.page-leave-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.page-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .page-leave-to {
   opacity: 0;
-  filter: blur(1rem);
+  transform: translateY(-10%);
+}
+@media all and (min-width: 768px) {
+  .page-enter-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .page-leave-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .page-enter-to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .page-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 }
 </style>
