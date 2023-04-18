@@ -35,7 +35,7 @@
 
 <script setup>
 // const hasName = ref(false);
-const showNemeInput = ref(false);
+// const showNemeInput = ref(false);
 
 // const changeName = () => {
 //   showNemeInput.value = !showNemeInput.value;
