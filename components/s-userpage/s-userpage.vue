@@ -37,9 +37,9 @@
 // const hasName = ref(false);
 const showNemeInput = ref(false);
 
-const changeName = () => {
-  showNemeInput.value = !showNemeInput.value;
-};
+// const changeName = () => {
+//   showNemeInput.value = !showNemeInput.value;
+// };
 const isCorrectName = ref(false);
 
 let user = ref({
@@ -57,10 +57,10 @@ const checkedValidateError = () => {
   return errors.name;
 };
 
-const setUserName = () => {
-  user.value.name = user.value.nameChoise;
-  showNemeInput.value = false;
-};
+// const setUserName = () => {
+//   user.value.name = user.value.nameChoise;
+//   showNemeInput.value = false;
+// };
 
 watch(
   user.value,

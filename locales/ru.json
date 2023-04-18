@@ -16,8 +16,7 @@
     ],
     "language": "EN",
     "login": "Войти",
-    "logout": "Выйти",
-    "btnBackText": "Вернуться"
+    "logout": "Выйти"
   },
   "form": {
     "login": "Войти",
