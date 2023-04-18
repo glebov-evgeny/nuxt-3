@@ -74,11 +74,12 @@ async function registerUser() {
     try {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { user } = await createUserWithEmailAndPassword(nuxtApp.$auth, fieldsData.email, fieldsData.password);
-      if (router.currentRoute.value.name === 'authorization') {
-        router.push({ path: '/presentation' });
-      } else {
-        router.push({ path: '/information' });
-      }
+      // if (router.currentRoute.value.name === 'authorization') {
+      //   router.push({ path: '/presentation' });
+      // } else {
+      //   router.push({ path: '/information' });
+      // }
+      router.push({ path: '/information' });
       emit('onSend');
       currentUser.setUser(user.email, user.uid);
       /* устанавливаю куки с почтой и id пользователя на 7 дней */

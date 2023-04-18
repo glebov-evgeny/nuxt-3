@@ -5,10 +5,10 @@
       <h2 class="s-userpage__title s-title">{{ $t('userpage.title') }}</h2>
       <div class="s-userpage__block">
         <div class="s-userpage__item">
-          <p class="s-userpage__item-label">Почта:</p>
+          <p class="s-userpage__item-label">{{ $t('form.email') }}:</p>
           <p class="s-userpage__item-text">{{ user.email }}</p>
         </div>
-        <div class="s-userpage__item">
+        <!-- <div class="s-userpage__item">
           <p class="s-userpage__item-label">Имя:</p>
           <div class="s-userpage__item-text">
             <span>{{ user.name }}</span>
@@ -25,8 +25,8 @@
               OK
             </button>
           </div>
-        </div>
-        <button type="button" class="s-userpage__item-btn">Обновить</button>
+        </div> -->
+        <!-- <button type="button" class="s-userpage__item-btn">Обновить</button> -->
       </div>
       <nuxt-link to="/information" class="a-button-back">{{ $t('btnBack') }}</nuxt-link>
     </div>

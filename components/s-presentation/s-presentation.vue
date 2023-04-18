@@ -6,13 +6,13 @@
       <div class="s-presentation__block">
         <p class="s-presentation__description" v-html="$t('presentation.description')"></p>
       </div>
-      <nuxt-link to="/information" class="a-button-back">{{ btnBackText }}</nuxt-link>
+      <nuxt-link to="/information" class="a-button-back">{{ $t('btnBack') }}</nuxt-link>
     </div>
   </section>
 </template>
 
 <script setup>
-const btnBackText = ref('Вернуться');
+// const btnBackText = ref('Вернуться');
 </script>
 
 <style lang="scss">

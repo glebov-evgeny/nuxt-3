@@ -18,7 +18,10 @@
     width: rem(238);
     height: rem(238);
     margin: 0 auto;
-    background: var(--color-body);
+
+    // background: var(--color-body);
+    background: url('../../assets/images/photo/pic.png') center no-repeat;
+    background-size: contain;
     border-radius: 50%;
   }
 }
