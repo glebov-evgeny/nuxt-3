@@ -1,0 +1,1 @@
+.page-enter-active{opacity:0;transform:translateY(2%);transition:all .3s ease-in-out}.page-leave-active{transition:all .3s ease-in-out}.page-enter-to,.page-leave-active{opacity:1;transform:translateY(0)}.page-leave-to{opacity:0;transform:translateY(-2%)}
