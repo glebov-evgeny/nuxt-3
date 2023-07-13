@@ -3,15 +3,31 @@
   grid-area: photo;
 
   &__block {
-    padding: var(--a-padding-x6);
-    background: var(--color-pink);
-    border-radius: var(--border-radius-x2);
+    @include _768 {
+      padding: var(--a-padding-x10) var(--a-padding-x8);
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: var(--a-padding-x10) var(--a-padding-x4);
+  }
+
+  &__container {
+    height: 100%;
+    background: var(--color-black);
+    border-radius: var(--border-radius-x1);
   }
 
   &__image {
     @include _1140 {
       width: rem(280);
       height: rem(280);
+    }
+    @include _768 {
+      width: rem(260);
+      height: rem(260);
     }
 
     display: block;
@@ -20,7 +36,7 @@
     margin: 0 auto;
 
     // background: var(--color-body);
-    background: url('../../assets/images/photo/pic-02.png') center no-repeat, #fff;
+    background: url('../../assets/images/photo/pic-03.png') center no-repeat, #fff;
     background-size: contain;
     border-radius: 50%;
   }

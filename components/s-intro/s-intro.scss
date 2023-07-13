@@ -3,17 +3,17 @@
   grid-area: intro;
 
   &__block {
-    padding: var(--a-padding-x6);
-    background: var(--color-brilliant);
-    border-radius: var(--border-radius-x2);
+    @include _768 {
+      padding: var(--a-padding-x10) var(--a-padding-x8);
+    }
+
+    padding: var(--a-padding-x10) var(--a-padding-x4);
   }
 
   &__container {
-    @include _768 {
-      height: 100%;
-      background: var(--color-brilliant);
-      border-radius: var(--border-radius-x2);
-    }
+    height: 100%;
+    background: var(--color-black);
+    border-radius: var(--border-radius-x1);
   }
 
   &__subtitle {
@@ -36,6 +36,6 @@
     }
 
     font-size: rem(16);
-    text-align: justify;
+    line-height: 135%;
   }
 }

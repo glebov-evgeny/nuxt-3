@@ -6,8 +6,9 @@ body {
 body {
   overflow-x: hidden !important;
   background-color: var(--color-body);
-  font-family: 'TT Norms', sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
+  font-weight: 600;
   font-variant: no-common-ligatures;
   transition: background-color 0.3s;
 }
@@ -22,13 +23,13 @@ a {
   --layout-padding: 5rem; // 80px
   --layout-v-padding: 3.75rem; // 60px
 
-  @media all and (min-width: 768px) {
-    --layout-width: 47.5rem; // 760px
-  }
+  // @media all and (min-width: 768px) {
+  //   --layout-width: 58rem; // 760px
+  // }
 
-  @media all and (min-width: 1140px) {
-    --layout-width: 62rem; // 992px
-  }
+  // @media all and (min-width: 1140px) {
+  //   --layout-width: 62rem; // 992px
+  // }
 
   @media all and (min-width: 1440px) {
     --layout-width: 90rem; // 1440px
@@ -96,7 +97,6 @@ a {
   flex: 1 auto;
   width: 100%;
   margin-top: 3.125rem; // 50px
-  padding-bottom: 1rem;
   background-color: var(--color-body);
   @media screen and (min-width: 1140px) {
     margin-top: 5rem; // 80px

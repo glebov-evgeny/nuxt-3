@@ -29,6 +29,7 @@ const presentations = [
   grid-template-areas: 'intro' 'photo' 'swiper';
   gap: 1rem;
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'intro photo' 'swiper swiper';

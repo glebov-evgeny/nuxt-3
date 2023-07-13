@@ -8,16 +8,18 @@
   .swiper-slide {
     overflow: hidden;
     border-radius: var(--border-radius-x3);
+    box-sizing: border-box;
   }
 
   &__title {
     margin-bottom: rem(24);
+    color: var(--color-white);
   }
 
   &__block {
     position: relative;
     padding: var(--a-padding-x6);
-    background: var(--color-base-white);
+    background: var(--color-black);
     border-radius: var(--border-radius-x2);
   }
 
