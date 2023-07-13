@@ -1,5 +1,5 @@
 .s-intro {
-  color: var(--color-white);
+  color: var(--color-second);
   grid-area: intro;
 
   &__block {
@@ -12,7 +12,7 @@
 
   &__container {
     height: 100%;
-    background: var(--color-black);
+    background: var(--color-main);
     border-radius: var(--border-radius-x1);
   }
 
@@ -25,16 +25,12 @@
     font-size: rem(16);
   }
 
-  &__title {
-    margin-bottom: rem(8);
-    color: var(--color-white);
-  }
-
   &__text {
     @include _1140 {
       font-size: rem(18);
     }
 
+    margin-top: rem(8);
     font-size: rem(16);
     line-height: 135%;
   }

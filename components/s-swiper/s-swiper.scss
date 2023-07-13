@@ -4,7 +4,11 @@
   box-sizing: border-box;
   color: var(--color-second);
   grid-area: swiper;
-
+  .swiper {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+  }
   .swiper-slide {
     overflow: hidden;
     border-radius: var(--border-radius-x3);
@@ -13,20 +17,19 @@
 
   &__title {
     margin-bottom: rem(24);
-    color: var(--color-white);
+    color: var(--color-second);
   }
 
   &__block {
     position: relative;
-    padding: var(--a-padding-x6);
-    background: var(--color-black);
+    padding: var(--a-padding-x10) var(--a-padding-x4);
+    background: var(--color-main);
     border-radius: var(--border-radius-x2);
   }
 
   &__item {
     position: relative;
     &-img {
-      display: block;
       width: 100%;
       max-width: 100%;
     }

@@ -6,6 +6,7 @@
           <p class="s-intro__subtitle">{{ $t('intro.subtitle') }}</p>
           <h2 class="s-intro__title s-title">{{ $t('intro.title') }}</h2>
           <p class="s-intro__text">{{ $t('intro.description') }}</p>
+          <p class="s-intro__text">{{ $t('intro.description_2') }}</p>
         </div>
       </div>
     </div>

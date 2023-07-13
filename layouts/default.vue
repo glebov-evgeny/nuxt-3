@@ -31,13 +31,13 @@ onMounted(() => {
 <style>
 .page-enter-active {
   opacity: 0;
-  transform: translateY(10%);
-  transition: all 0.5s ease-in-out;
+  transform: translateY(2%);
+  transition: all 0.3s ease-in-out;
 }
 .page-leave-active {
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .page-enter-to {
@@ -47,9 +47,9 @@ onMounted(() => {
 
 .page-leave-to {
   opacity: 0;
-  transform: translateY(-10%);
+  transform: translateY(-2%);
 }
-@media all and (min-width: 768px) {
+/* @media all and (min-width: 768px) {
   .page-enter-active {
     opacity: 0;
     transform: translateX(100%);
@@ -70,5 +70,5 @@ onMounted(() => {
     opacity: 0;
     transform: translateX(-100%);
   }
-}
+} */
 </style>

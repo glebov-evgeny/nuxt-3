@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation, Autoplay } from 'swiper';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps({
@@ -50,11 +50,11 @@ const sliderNext = ref(null);
 
 const swiperConfig = reactive({
   slidesPerView: 1,
-  spaceBetween: 25,
+  spaceBetween: 16,
   grabCursor: true,
-  loop: true,
+  loop: false,
   autoplay: {
-    delay: 500,
+    delay: 2000,
     disableOnInteraction: false,
   },
   navigation: {
@@ -63,15 +63,13 @@ const swiperConfig = reactive({
   },
   breakpoints: {
     550: {
-      // slidesPerGroup: 2,
       slidesPerView: 2.2,
-      spaceBetween: 20,
     },
-    1440: {
+    1200: {
       slidesPerView: 3.2,
     },
   },
-  modules: [Pagination, Navigation],
+  modules: [Pagination, Navigation, Autoplay],
   pagination: {
     el: '.s-swiper__pagination',
     clickable: true,
